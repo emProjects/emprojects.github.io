@@ -8,5 +8,36 @@
 <body>
     <div style="font-family:'Comic Sans MS'; font-size:40px; color:orangered">Hello world:)</div>
     <img src="cat.png" width="200"/>
+    <br />
+    <button onclick="onclickWrite()">Write</button>
+
+    <script>
+        function onclickWrite() {
+            alert("I am doing to write...");
+            saveToFile("output.txt", "We love Gamma");
+            alert("I had written... to output.txt");
+            
+        }
+
+
+
+
+        function saveToFile(filename, text) {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+        }
+
+
+
+    </script>
+
 </body>
 </html>
