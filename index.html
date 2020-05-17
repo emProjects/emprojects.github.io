@@ -1,29 +1,707 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        .-c-img-small {
+            height: 50px;
+        }
+        td, th {
+            padding: 8px;
+        }
+        td {
+            padding-left:50px;
+        }
+        table, td, th {
+            border: 1px solid #808080;
+            border-collapse: collapse;
+        }
+    </style>
+
+    
 </head>
 <body>
-    <div style="font-family:'Comic Sans MS'; font-size:40px; color:orangered">Hello world:)</div>
-    <img src="cat.png" width="200"/>
-    <br />
-    <button onclick="onclickWrite()">Write</button>
+    <div id="divContent" style="width:96%; height:80vh;  border:2px solid black; margin:2%; font-family:Verdana">
+        <div id="divLabel" style="display:none">
+            <div style="position:center; text-align:center">
+                <div style="display:inline-block">
+                    <h4>E</h4>
+                    <h3 id="divLabelE" style="color:green">???</h3>
+                </div>
+                <div style="display:inline-block; margin-left:40%">
+                    <h4>I</h4>
+                    <h3 id="divLabelI" style="color:green">???</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="divRound" style="display:none;">
+            <div style="position:center; top:30vh; text-align:center">
+                <img id="imgStim" src="face1.png" style="height:40vh">
+                <div id="divWordStim" style="color:blue; margin-top:18vh; font-family:Arial">
+                    <h1 id="hWordStim"></h1>
+                </div>
+
+                <div id="divMsgErr" style="color:red; margin-top:5%;"><span style="font-weight: bold;">X</span> Incorrect, please press the other key</div>
+            </div>
+        </div>
+
+        <div id="divInstrRound" style="text-align:center; display:none">
+            <div id="divTextInstrRound">
+                <h2>Part <span id="spanIndRound">???</span> of <span id="spanNumRound">???</span></h2>
+                <p id="parWatchOut">Watch out, the labels have changed!</p>
+                <p>Use the left finger on the <span style="font-weight: bold;">E</span> key for <span id="spanLabelE" style="color:green; font-weight:bold">???</span></p>
+                <p>Use the right finger on the <span style="font-weight: bold;">I</span> key for <span id="spanLabelI" style="color:green; font-weight:bold">???</span></p>
+                <br />
+                <p>If you make a mistake, a red <span style="font-weight: bold; color:red">X</span> will appear. Press the other key to continue.</p>
+                <p><u>Go as fast as you can</u> while being accurate</p>
+                <br />
+                <p>Press the <b>Space Bar</b> when you are ready to start</p>
+            </div>
+        </div>
+
+        <div id="divInstrMain" style="display:block">
+            <div id="divTextInstrMain" style="margin-left:5%">
+                <h3 style="text-align:center">IMPLICIT ASSOCIATION TEST</h3>
+                <p>Use <b>E</b> and <b>I</b> keys to characterize items into groups as fast as you can. These are the 4 groups and the items that belong to each:</p>
+                <div style="justify-content:center; display:flex">
+                    <table style="text-align:left;">
+                        <tr style="background-color:gainsboro">
+                            <th>Category</th>
+                            <th style="padding-left:50px">Items</th>
+                        </tr>
+                        <tr>
+                            <th>Positive</th>
+                            <td style="color:blue">Good, Kind, Smart, Healthy, Friendly, Happy</td>
+                        </tr>
+                        <tr>
+                            <th>Negative</th>
+                            <td style="color:blue">Bad, Scary, Sick, Stupid, Ugly, Cruel</td>
+                        </tr>
+                        <tr>
+                            <th>Faces</th>
+                            <td>
+                                <img src="face0.png" class="-c-img-small">
+                                <img src="face1.png" class="-c-img-small">
+                                <img src="face2.png" class="-c-img-small">
+                                <img src="face3.png" class="-c-img-small">
+                                <img src="face4.png" class="-c-img-small">
+                                <img src="face5.png" class="-c-img-small">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Masks</th>
+                            <td>
+                                <img src="mask0.png" class="-c-img-small">
+                                <img src="mask1.png" class="-c-img-small">
+                                <img src="mask2.png" class="-c-img-small">
+                                <img src="mask3.png" class="-c-img-small">
+                                <img src="mask4.png" class="-c-img-small">
+                                <img src="mask5.png" class="-c-img-small">
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+                <p>There are <span id="spanNumTest" style="font-weight:bold">???</span> parts. The instructions change for each part. Pay attention!</p>
+                <div style="justify-content:center; display:flex">
+                    <button style="font-size:1em; background-color:lightsteelblue" onclick="onclickInstrMainContinue()">Continue</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="divResult" style="display:none;">
+            <div id="divTextResult" style="text-align:center">
+                <br />
+                <h3>Thank you taking the Implicit Association Test!</h3>
+                <br />
+                <p>When <b>Masks</b> were associated with <b>Positive</b> terms </p>
+                <p>your <b>response time</b> was <span id="spanResRatioMaskP" style="font-weight:bold"></span> and</p>
+                <p>your <b>error rate</b> was <span id="spanResErrRateMaskP" style="font-weight:bold"></span></p>
+                <br />
+
+                <p style="color:red">Please make sure you can locate the file <b>resultIAT.txt</b> in your <b>Downloads</b> folder. The file also should be visible at the bottom of this page.</p>
+                <p>If results were not downloaded automatically, please press this button <button onclick="onclickDownloadResults()">Download Results</button></p>
+                <p style="color:purple">...and if that did not work either, please press this button and copy <b>all</b> the text from the box below <button onclick="onclickCopyResults()">Copy Results</button></p>
+                <div id="divLog" style="background-color:lightblue; display:none; text-align:left; width:60%; margin:auto; font-weight:bold; font-size:0.4em"></div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        function onclickWrite() {
-            alert("I am doing to write...");
-            saveToFile("output.txt", "We love Gamma");
-            alert("I had written... to output.txt");
-            
+        var words = ["Good", "Kind", "Smart", "Healthy", "Friendly", "Happy", "Bad", "Scary", "Sick", "Stupid", "Ugly", "Cruel"];
+        var filesImg = ["face0.png", "face1.png", "face2.png", "face3.png", "face4.png", "face5.png", "mask0.png", "mask1.png", "mask2.png", "mask3.png", "mask4.png", "mask5.png"];
+
+        var indRound = 0;
+        var cntStim = 0;
+        var cntWord = 0;
+        var cntImg = 0;
+
+        /*
+        var infoRound0 = { taskE: "m", taskI: "f", useWords: false, useImgs: true, numRepeat: 2, infosTrial: [] };
+        var infoRound1 = { taskE: "+", taskI: "-", useWords: true, useImgs: false, numRepeat: 2, infosTrial: [] };
+        var infoRound2 = { taskE: "f-", taskI: "m+", useWords: true, useImgs: true, numRepeat: 1, infosTrial: [] };
+        var infoRound3 = { taskE: "m+", taskI: "f-", useWords: true, useImgs: true, numRepeat: 2, infosTrial: [] };
+        var infoRound4 = { taskE: "m-", taskI: "f+", useWords: true, useImgs: true, numRepeat: 2, infosTrial: [] };
+        var infoRound5 = { taskE: "f-", taskI: "m+", useWords: true, useImgs: true, numRepeat: 2, infosTrial: [] };
+        var infoRound6 = { taskE: "f+", taskI: "m-", useWords: true, useImgs: true, numRepeat: 2, infosTrial: [] };
+        var infosRound = [infoRound0, infoRound1, infoRound2, infoRound3, infoRound4, infoRound5, infoRound6];
+        */
+
+        var infoRound0 = { taskE: "m", taskI: "f", useWords: false, useImgs: true, numRepeat: 1, infosTrial: [], timeAver: 0, timeAverCorrect: 0, numErr: 0, timeSD: 0, timeSDCorrect: 0 };
+        var infoRound1 = { taskE: "-", taskI: "+", useWords: true, useImgs: false, numRepeat: 1, infosTrial: [], timeAver: 0, timeAverCorrect: 0, numErr: 0, timeSD: 0, timeSDCorrect: 0 };
+        var infoRound2 = { taskE: "f+", taskI: "m-", useWords: true, useImgs: true, numRepeat: 1, infosTrial: [], timeAver: 0, timeAverCorrect: 0, numErr: 0, timeSD: 0, timeSDCorrect: 0 };
+
+        var infoRound3 = { taskE: "m+", taskI: "f-", useWords: true, useImgs: true, numRepeat: 1, infosTrial: [], timeAver: 0, timeAverCorrect: 0, numErr: 0, timeSD: 0, timeSDCorrect: 0 };
+        var infoRound4 = { taskE: "m-", taskI: "f+", useWords: true, useImgs: true, numRepeat: 1, infosTrial: [], timeAver: 0, timeAverCorrect: 0, numErr: 0, timeSD: 0, timeSDCorrect: 0 };
+
+        var infoRound5 = { taskE: "f-", taskI: "m+", useWords: true, useImgs: true, numRepeat: 1, infosTrial: [], timeAver: 0, timeAverCorrect: 0, numErr: 0, timeSD: 0, timeSDCorrect: 0 };
+        var infoRound6 = { taskE: "f+", taskI: "m-", useWords: true, useImgs: true, numRepeat: 1, infosTrial: [], timeAver: 0, timeAverCorrect: 0, numErr: 0, timeSD: 0, timeSDCorrect: 0 };
+
+        var infosRound = [infoRound0, infoRound1, infoRound2, infoRound3, infoRound4, infoRound5, infoRound6];
+
+        var infoTrial = { stim: "f0", time: 0, isCorrect: true, key: "E" };
+
+        var arrRandImg = [];
+        var arrRandWord = [];
+
+        var state = "InstrMain"; // "InstrRound", "Round", "Result"
+
+        var codeKeyE = 69;
+        var codeKeyI = 73;
+        var codeKeySpace = 32;
+
+        var tagStim = "";
+        var timeEv = 0;
+        var isStimRepeat = false;
+
+        var strLog = "";
+
+        document.getElementById("divInstrMain").style.display = "block";
+        document.getElementById("divLabel").style.display = "none";
+        document.getElementById("divInstrRound").style.display = "none";
+        document.getElementById("divRound").style.display = "none";
+        document.getElementById("divResult").style.display = "none";
+        document.getElementById("spanNumTest").innerHTML = infosRound.length;
+
+
+        var numTrialDiscard = 4; // TODO: make 8
+        var ratioTimeAverMPosToMNeg34;
+        var ratioTimeAverMPosToMNeg56;
+        var ratioTimeAverMPosToMNeg;
+        var numErrMPos;
+        var numErrMNeg;
+
+        window.onkeyup = function (ev) {
+            ev = ev || window.event;
+
+            if ((ev.keyCode == codeKeyI) || (ev.keyCode == codeKeyE)) {
+                //alert("time = " + ev.timeStamp);
+                oninputEI(ev);
+            }
+            else if (ev.keyCode == codeKeySpace) {
+                oninputSpace(ev);
+            }
+        }
+
+        
+        window.onload = function () {
+            showInstrMain();
+            document.getElementById("spanNumTest").innerHTML = infosRound.length;
+        }
+        
+
+        function strLogToInfosRound(strLog) {
+            alert(strLog);
+        }
+
+        function onclickCopyResults() {
+            document.getElementById("divLog").style.display = "block";
+            document.getElementById("divLog").innerText = strLog;
+        }
+
+
+        function analyzeResult() {
+
+            for (var iRound = 0; iRound < infosRound.length; iRound++) {
+
+                var infoRound = infosRound[iRound];
+                var infosTrial = infoRound.infosTrial;
+
+                infoRound.timeAver = 0;
+                infoRound.numErr = 0;
+                infoRound.timeAverCorrect = 0;
+
+                for (var iTrial = numTrialDiscard; iTrial < infosTrial.length; iTrial++) {
+                    var infoTrial = infosTrial[iTrial];
+                    infoRound.timeAver += infoTrial.time;
+
+                    if (!infoTrial.isCorrect) {
+                        infoRound.numErr += 1;
+                    }
+                    else {
+                        infoRound.timeAverCorrect += infoTrial.time;
+                    }
+
+                }
+                infoRound.timeAver = infoRound.timeAver / (infosTrial.length - numTrialDiscard);
+                infoRound.timeAverCorrect = infoRound.timeAverCorrect / (infosTrial.length - numTrialDiscard - infoRound.numErr);
+
+                infoRound.timeSD = 0
+                infoRound.timeSDCorrect = 0;
+                for (var iTrial = numTrialDiscard; iTrial < infosTrial.length; iTrial++) {
+                    var infoTrial = infosTrial[iTrial];
+
+                    infoRound.timeSD += (infoTrial.time - infoRound.timeAver) * (infoTrial.time - infoRound.timeAver);
+                    if (infoTrial.isCorrect) {
+                        infoRound.timeSDCorrect += (infoTrial.time - infoRound.timeAverCorrect) * (infoTrial.time - infoRound.timeAverCorrect);
+                    }
+                }
+
+                infoRound.timeSD = Math.sqrt(infoRound.timeSD / (infosTrial.length - numTrialDiscard));
+                infoRound.timeSDCorrect = Math.sqrt(infoRound.timeSDCorrect / (infosTrial.length - numTrialDiscard - infoRound.numErr));
+
+            }
+
+            ratioTimeAverMPosToMNeg34 = infosRound[3].timeAver / infosRound[4].timeAver;
+            ratioTimeAverMPosToMNeg56 = infosRound[5].timeAver / infosRound[6].timeAver;
+            ratioTimeAverMPosToMNeg = (infosRound[3].timeAver + infosRound[5].timeAver) / (infosRound[4].timeAver + infosRound[6].timeAver);
+            numErrMPos = infosRound[3].numErr + infosRound[5].numErr;
+            numErrMNeg = infosRound[4].numErr + infosRound[6].numErr;
+
+
+        }
+
+        function infosRoundToStrLog() {
+
+            strLog = "STATS_START\r\n";
+
+
+            for (var iRound = 0; iRound < infosRound.length; iRound++) {
+                var infoRound = infosRound[iRound];
+                strLog += "ROUND: " + iRound + " timeAver: " + infoRound.timeAver + " timeAverCorrect: " + infoRound.timeAverCorrect +
+                    " timeSD: " + infoRound.timeSD + " timeSDCorrect: " + infoRound.timeSDCorrect + " numErr: " + infoRound.numErr + "\r\n";
+            }
+
+
+            strLog += "ratioTimeAverMPosToMNeg: " + ratioTimeAverMPosToMNeg + "\r\n";
+            strLog += "ratioTimeAverMPosToMNeg34: " + ratioTimeAverMPosToMNeg34 + "\r\n";
+            strLog += "ratioTimeAverMPosToMNeg56: " + ratioTimeAverMPosToMNeg56 + "\r\n";
+            strLog += "numErrMPos: " + numErrMPos + "\r\n";
+            strLog += "numErrMNeg: " + numErrMNeg + "\r\n";
+            strLog += "numTrialDiscard:" + numTrialDiscard + "\r\n";
+
+            strLog += "STATS_END\r\n";
+
+
+            strLog += "ROUNDS_START\r\n";
+            for (var iRound = 0; iRound < infosRound.length; iRound++) {
+                var infoRound = infosRound[iRound];
+                strLog += "ROUND:" + iRound + "\r\n";
+                strLog += "taskE:" + infoRound.taskE + "\r\n";
+                strLog += "taskI:" + infoRound.taskI + "\r\n";
+                strLog += "useWords:" + infoRound.useWords + "\r\n";
+                strLog += "useImgs:" + infoRound.useImgs + "\r\n";
+                strLog += "numRepeat:" + infoRound.numRepeat + "\r\n";
+                strLog += "timeAver: " + infoRound.timeAver + "\r\n";
+                strLog += "timeAverCorrect: " + infoRound.timeAverCorrect + "\r\n";
+                strLog += "timeSD: " + infoRound.timeSD + "\r\n";
+                strLog += "timeSDCorrect: " + infoRound.timeSDCorrect + "\r\n";
+                strLog += "numErr: " + infoRound.numErr + "\r\n";
+
+                var infosTrial = infoRound.infosTrial;
+                for (var iTrial = 0; iTrial < infosTrial.length; iTrial++) {
+                    var infoTrial = infosTrial[iTrial];
+                    strLog += infoTrial.stim + " " + infoTrial.time + " " + infoTrial.isCorrect + " " + infoTrial.key + "\r\n";
+                }
+
+            }
+            strLog += "ROUNDS_END\r\n";
+
+            //alert(strLog);
+
+        }
+function onclickDownloadResults() {
+            download("resultIAT.txt", strLog)
+        }
+
+        // labelEI("E")
+        function labelEI(nameEI) {
+            var infoRound = infosRound[indRound];
+            var task = [];
+            if (nameEI === "E") {
+                task = infoRound.taskE;
+            }
+            else if (nameEI === "I") {
+                task = infoRound.taskI;
+            }
+
+            var label;
+            if (task === "+") {
+                label = "Positive";
+            }
+            else if (task === "-") {
+                label = "Negative";
+            }
+            else if (task === "m") {
+                label = "Mask";
+            }
+            else if (task === "f") {
+                label = "Face";
+            }
+            else if (task === "m+") {
+                label = "Mask or Positive";
+            }
+            else if (task === "m-") {
+                label = "Mask or Negative";
+            }
+            else if (task === "f+") {
+                label = "Face or Positive";
+            }
+            else if (task === "f-") {
+                label = "Face or Negative";
+            }
+            return label;
+        }
+
+
+        function onclickShowInstrMain() {
+            showInstrMain();
+        }
+
+        function onclickShowInstrRound() {
+            showInstrRoundNext();
+        }
+
+        function onclickRunRoundNext() {
+            runRoundNext();
+        }
+
+        function onclickShowResult() {
+            showResult();
+        }
+
+        /*function onclickPressEI() {
+            oninputEI(0);
+        }*/
+
+        /*function onclickPressSpace() {
+            oninputSpace();
+        }*/
+
+        function oninputSpace(ev) {
+            timeEv = ev.timeStamp;
+
+            /*
+            if (state === "InstrMain") {
+                showInstrRoundNext();
+            }
+            else
+            */
+            if (state === "InstrRound") {
+                runRoundNext();
+            }
+        }
+
+        function onclickInstrMainContinue() {
+            showInstrRoundNext();
+        }
+
+
+        function oninputEI(ev) {
+            if (state === "Round") {
+                //alert("timeStim = " + timeStim + "timeEv = " + ev.timeStamp);
+                var timeResponse = 0;
+                if (!isStimRepeat) {
+                    timeResponse = ev.timeStamp - timeEv;
+                }
+                timeEv = ev.timeStamp;
+
+                var infoRound = infosRound[indRound];
+                var taskE = infoRound.taskE;
+                var taskI = infoRound.taskI;
+
+                var isCorrect = false;
+                if (ev.keyCode == codeKeyE) {
+                    if (taskE.includes(tagStim.charAt(0))) {
+                        isCorrect = true;
+                    }
+                }
+                else if (ev.keyCode == codeKeyI) {
+                    if (taskI.includes(tagStim.charAt(0))) {
+                        isCorrect = true;
+                    }
+                }
+                var key = "E";
+                if (ev.keyCode == codeKeyI) {
+                    key = "I";
+                }
+
+                if (!isStimRepeat) {
+                    var infoTrial = { stim: tagStim, time: timeResponse, isCorrect: isCorrect, key: key };
+                    infoRound.infosTrial[infoRound.infosTrial.length] = infoTrial;
+                }
+
+                if (!isCorrect) {
+                    isStimRepeat = true;
+                    document.getElementById("divMsgErr").style.visibility = "visible";
+                }
+                else {
+                    isStimRepeat = false;
+                    cntStim++;
+                    runStimNext();
+                }
+            }
+        }
+
+
+        function showInstrMain() {
+            state = "InstrMain";
+            document.getElementById("divInstrMain").style.display = "block";
+            document.getElementById("spanNumTest").innerHTML = infosRound.length;
+            document.getElementById("divLabel").style.display = "none";
+            document.getElementById("divInstrRound").style.display = "none";
+            document.getElementById("divRound").style.display = "none";
+            document.getElementById("divResult").style.display = "none";
+        }
+
+        
+        function showInstrRoundNext() {
+
+            var numRound = infosRound.length;
+            if (indRound >= numRound) {
+                showResult();
+                return;
+            }
+
+            state = "InstrRound";
+            document.getElementById("divInstrMain").style.display = "none";
+            document.getElementById("divLabel").style.display = "block";
+            document.getElementById("divInstrRound").style.display = "block";
+            document.getElementById("divRound").style.display = "none";
+            document.getElementById("divResult").style.display = "none";
+
+            document.getElementById("spanIndRound").innerText = indRound + 1;
+            document.getElementById("spanNumRound").innerText = numRound;
+            if (indRound == 0) {
+                document.getElementById("parWatchOut").style.visibility = "hidden";
+            }
+            else {
+                document.getElementById("parWatchOut").style.visibility = "visible";
+            }
+
+            var labelE = labelEI("E");
+            var labelI = labelEI("I");
+            document.getElementById("spanLabelE").innerText = labelE;
+            document.getElementById("spanLabelI").innerText = labelI;
+            document.getElementById("divLabelE").innerText = labelE;
+            document.getElementById("divLabelI").innerText = labelI;
+        }
+
+        function runStimNext() {
+            if (cntStim == 0) {
+                document.getElementById("divInstrMain").style.display = "none";
+                document.getElementById("divLabel").style.display = "block";
+                document.getElementById("divInstrRound").style.display = "none";
+                document.getElementById("divRound").style.display = "block";
+                document.getElementById("divResult").style.display = "none";
+            }
+
+            document.getElementById("divMsgErr").style.visibility = "hidden";
+
+
+            infoRound = infosRound[indRound];
+            if ((infoRound.useImgs) && (!infoRound.useWords)) {
+                var numStim = arrRandImg.length;
+
+                if (cntStim >= numStim) {
+                    cntStim = 0;
+                    indRound++;
+                    showInstrRoundNext();
+                }
+
+                var indImg = arrRandImg[cntStim];
+                if (indImg < filesImg.length / 2) {
+                    tagStim = "f" + indImg;
+                }
+                else {
+                    tagStim = "m" + (indImg - (filesImg.length / 2));
+                }
+
+                var fileImg = filesImg[indImg];
+                document.getElementById("divWordStim").style.display = "none";
+                document.getElementById("imgStim").style.display = "inline";
+                document.getElementById("imgStim").src = fileImg;
+                //document.getElementById("divInfoStim").innerText = " stim = " + cntStim + " / " + (numStim - 1) + " TAG = " + tagStim + " file = " + fileImg;
+
+                timeStim = Date.now();
+
+            }
+            else if ((!infoRound.useImgs) && (infoRound.useWords)) {
+                var numStim = arrRandWord.length;
+
+                if (cntStim >= numStim) {
+                    cntStim = 0;
+                    indRound++;
+                    showInstrRoundNext()
+                }
+
+                var indWord = arrRandWord[cntStim];
+
+                if (indWord < words.length / 2) {
+                    tagStim = "+" + indWord;
+                }
+                else {
+                    tagStim = "-" + (indWord - (words.length / 2));
+                }
+
+                var word = words[indWord];
+                document.getElementById("divWordStim").style.display = "block";
+                document.getElementById("hWordStim").innerText = word;
+                document.getElementById("imgStim").style.display = "none";
+                //document.getElementById("divInfoStim").innerText = "stim = " + cntStim + " / " + (numStim - 1) + " TAG = " + tagStim + " word = " + word;
+
+                timeStim = Date.now();
+
+            }
+            else if ((infoRound.useImgs) && (infoRound.useWords)) {
+                var numStim = arrRandWord.length + arrRandImg.length;
+
+                if (cntStim >= numStim) {
+                    cntStim = 0;
+                    indRound++;
+                    showInstrRoundNext()
+                }
+
+                if (cntStim % 2 == 1) {
+
+                    var indWord = arrRandWord[cntWord];
+                    if (indWord < words.length / 2) {
+                        tagStim = "+" + indWord;
+                    }
+                    else {
+                        tagStim = "-" + (indWord - (words.length / 2));
+                    }
+                    var word = words[indWord];
+
+                    document.getElementById("divWordStim").style.display = "block";
+                    document.getElementById("hWordStim").innerText = word;
+                    document.getElementById("imgStim").style.display = "none";
+                    //document.getElementById("divInfoStim").innerText = "stim = " + cntStim + " / " + (numStim - 1) + " TAG = " + tagStim + " word = " + word;
+                    cntWord++;
+                }
+                else {
+
+                    var indImg = arrRandImg[cntImg];
+                    if (indImg < filesImg.length / 2) {
+                        tagStim = "f" + indImg;
+                    }
+                    else {
+                        tagStim = "m" + (indImg - (filesImg.length / 2));
+                    }
+
+                    var fileImg = filesImg[indImg];
+
+                    var fileImg = filesImg[arrRandImg[cntImg]];
+                    document.getElementById("divWordStim").style.display = "none";
+                    document.getElementById("imgStim").style.display = "inline";
+                    document.getElementById("imgStim").src = fileImg;
+                    //document.getElementById("divInfoStim").innerText = "stim = " + cntStim + " / " + (numStim - 1) + " TAG = " + tagStim + " file = " + fileImg;
+                    cntImg++;
+                }
+
+                timeStim = Date.now();
+
+            }
+        }
+
+        
+        function runRoundNext() {
+
+            state = "Round";
+            if (indRound >= infosRound.length) {
+                showResult();
+                return;
+            }
+
+
+            //alert("Starting round " + indRound);
+
+            var labelE = labelEI("E");
+            var labelI = labelEI("I");
+            document.getElementById("divLabelE").innerText = labelE;
+            document.getElementById("divLabelI").innerText = labelI;
+
+            arrRandImg = arrayRandomOrder(filesImg.length);
+            arrRandWord = arrayRandomOrder(words.length);
+
+            var infoRound = infosRound[indRound];
+            for (var iRepeat = 0; iRepeat < infoRound.numRepeat - 1; iRepeat++) {
+                arrRandImg = arrRandImg.concat(arrayRandomOrder(filesImg.length));
+                arrRandWord = arrRandWord.concat(arrayRandomOrder(words.length));
+            }
+
+
+            //alert("arrRandImg = " + arrRandImg);
+            //alert("arrRandWord = " + arrRandWord);
+
+            cntStim = 0;
+            cntWord = 0;
+            cntImg = 0;
+
+            isStimRepeat = false;
+
+            runStimNext();
         }
 
 
 
+        function showResult() {
+            state = "Result";
+            document.getElementById("divInstrMain").style.display = "none";
+            document.getElementById("divLabel").style.display = "none";
+            document.getElementById("divInstrRound").style.display = "none";
+            document.getElementById("divRound").style.display = "none";
+            document.getElementById("divResult").style.display = "block";
 
-        function saveToFile(filename, text) {
+            analyzeResult();
+            infosRoundToStrLog();
+
+
+            download("resultIAT.txt", strLog);
+
+
+            if (ratioTimeAverMPosToMNeg > 1) {
+                document.getElementById("spanResRatioMaskP").innerText = "longer";
+            }
+            else if (ratioTimeAverMPosToMNeg < 1) {
+                document.getElementById("spanResRatioMaskP").innerText = "shorter";
+            }
+            else {
+                document.getElementById("spanResRatioMaskP").innerText = "the same";
+            }
+
+
+            if (numErrMPos > numErrMNeg) {
+                document.getElementById("spanResErrRateMaskP").innerText = "higher";
+            }
+            else if (numErrMPos < numErrMNeg) {
+                document.getElementById("spanResErrRateMaskP").innerText = "lower";
+            }
+            else {
+                document.getElementById("spanResErrRateMaskP").innerText = "the same";
+            }
+
+        }
+
+
+        function download(filename, text) {
             var element = document.createElement('a');
+
+
             element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
             element.setAttribute('download', filename);
 
@@ -35,7 +713,14 @@
             document.body.removeChild(element);
         }
 
-
+        function arrayRandomOrder(len) {
+            var arr = [];
+            for (var i = 0; i < len; i++) {
+                arr[i] = i;
+            }
+            var arrRand = arr.sort(function (a, b) { return 0.5 - Math.random() });
+            return arrRand;
+        }
 
     </script>
 
