@@ -6,26 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Favorite Thing</title>
+    <link rel="stylesheet" href="css/style.css">
 
     <style>
-        p, h1, h2, h3 {
-            font-family: "Segoe UI";
-        }
-        h1, h2, h3 {
-            color: #10297b;
-        }
-        .rounded-box{
-            border: 3.5px solid #d7def0;
-            border-radius: 10px;
-            width: 70%;
-            margin: auto;
-            background-color: white;
-            padding-left: 2%;
-            padding-right: 2%;
-            padding-bottom: 1%;
-            box-shadow: 3px 3px 3px #555b6e;
-        }
-
+        
         #light-chart {
             font-family: "Segoe UI";
             border-collapse: collapse;
@@ -46,21 +30,6 @@
             color: white;
         }
 
-        #gallery {
-            width: 80%;
-            margin: auto;
-        }
-        #gallery th {
-            padding: 1%;
-            text-align: left;
-            color: white;
-        }
-
-        .image{
-            width:100%;
-            border-radius: 8px;
-            box-shadow: 3px 3px 5px #757575;
-        }
         #davy{
             display: block;
             width:50%;
@@ -73,8 +42,9 @@
             width:50%;
             margin:auto;
         }
-
-        a:link, a:visited {
+        
+        
+        /*a:link, a:visited {
             background-color: #3753ae;
             color: white;
             padding: 1.3%;
@@ -82,16 +52,52 @@
             text-decoration: none;
             display: inline-block;
             border-radius: 4px;
-            box-shadow: 2px 2px 3px #b0b0b0;
-        }
+        }*/
         a:hover, a:active {
             background-color: #203169;
+        }
+        
+        #square {
+            width: 300px;
+            height: 300px;
+            background-color: #203169;
+            margin:auto;
+            
+            position:relative;
+            left: 1000px;
+
+            rotate: -45deg;
+            animation: rotate 2s infinite alternate ease-in-out, slide 2s forwards;
+        }
+        
+        @keyframes rotate {
+            to {
+                rotate: 45deg;
+            }
+        }
+
+        @keyframes slide {
+            to{
+                left: 0;
+            }
         }
 
     </style>
 </head>
 
-<body style="background-image: linear-gradient(#bee3db, #548e8b);">
+<body>
+
+    <br><br><br>
+
+    <ul class="nav">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!--<div id="square"></div>-->
+    
     <div class="rounded-box">
     <h1 style="text-align: center;">Theatrical Lighting Design</h1>
     </div>
@@ -129,10 +135,7 @@
 
     <h3>Stage 1: Understand the Script</h3>
     <p>Before you start lighting, you need to read the script...many...many times. 
-    You annotate the script to gain an understanding of the timing of the show and identify recurring locations and effects. 
-    Generally speaking, there are three types of light setups: Washes, spotlights, and effects. 
-    Washes are light queues that cover the entire stage. Spotlights cover a contained part of the stage to draw attention. 
-    And effects are the coolest because you get to blind the audience! Anything from strobe lights to fiber-optic stars could qualify as an effect.</p>
+    You annotate the script to gain an understanding of the timing of the show and identify recurring locations and effects. Generally speaking, there are three types of light setups: Washes, spotlights, and effects. Washes are light queues that cover the entire stage. Spotlights cover a contained part of the stage to draw attention. And effects are the coolest because you get to blind the audience! Anything from strobe lights to fiber-optic stars could qualify as an effect.</p>
     
     <h3>Stage 2: Focus Lights</h3>
     <p>Once you understand the show, you can hang and focus the lights to meet the needs of the script. The most important positions to hang lights from are:</p>
@@ -146,17 +149,7 @@
         However, frontlight should be kept close to a neutral white, otherwise skintones become distorted. It is important to isolate the light hitting the actors from the light hitting the set. 
         For example, in the following image, you can see that the actor and the set are lit with distinctly seperate colors, even at close proximity.</p>
     <img src="image/WhatsApp Image 2023-03-15 at 9.49.02 PM.jpeg" alt="Lighting contrast between actor and set" id="davy">
-
-    <p>Hanging lights in strategic positions is the hardest part of the process, so here are some resources to learn more:</p>
-    <a href="https://illuminated-integration.com/blog/stage-lighting-101/" target="_blank" style="object-align: center;">Stage Lighting 101 — Everything You Need to Know</a>
-    <br>
-    <br>
-    <a href="https://www.youtube.com/watch?v=wqMYsjHU5rU" target="_blank">Working in the Theatre: Lighting Design</a>
-    <br>
-    <br>
-    <a href="http://www.lightingandsoundamerica.com/reprint/MoulinRouge.pdf" target="_blank">Inside the kaleidoscopic world of Broadway's Moulin Rouge!</a>
-    <br>
-    <br>
+ 
     <p><strong>Fun Fact:</strong> The 100 pound lights hanging directly above the actor's heads are attatched to the ceiling with nothing but friction!</p>
     
     <h3>Stage 3: Create Color, Focus, and Intensity Palettes</h3>
@@ -214,8 +207,7 @@
 
     <div class="rounded-box">
     <h2>Conclusion</h2>
-    <p>So now you've learned about my favorite part of school and hopefully a little bit about lighting design! For me, programming lights is really addictive. It took me about 100 hours to 
-        complete the lighting design for <em>Puffs</em>, including one programming session that lasted 10 hours straight. Anyways, here's some photos of the final result!</p>
+    <p>So now you've learned about my favorite part of school and hopefully a little bit about lighting design! For me, programming lights is really addictive. It took me about 100 hours to complete the lighting design for <em>Puffs</em>, including one programming session that lasted 10 hours straight. Anyways, here's some photos of the final result!</p>
     
         <table id="gallery">
             <tr>
