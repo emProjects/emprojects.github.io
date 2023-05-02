@@ -1,6 +1,10 @@
 body{
-    background-color: #ffffff;
+    background-color: #c7aee7;
     color: white;
+}
+
+h1, p, li{
+    font-family: "SegoiUI", "SegoiUI", monospace;
 }
 
 ul {
@@ -8,7 +12,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #414141;
+    background-color: #1e1d3c;
 }
 
 li {
@@ -28,7 +32,7 @@ li a:hover:not(.active) {
 }
   
 .active {
-    background-color: #6f6f6f;
+    background-color: #4c54a4;
 }
 
 .grid-container{
@@ -38,7 +42,7 @@ li a:hover:not(.active) {
 }
 
 .grid-item{
-    background-color: #6f6f6f;
+    background-color: #2e1d3c;
     text-align: center;
     font-size:medium;
     padding:20px;
@@ -51,34 +55,31 @@ li a:hover:not(.active) {
 }
 
 .main-image{
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 2;
     grid-row: 2;
 }
 
 .main1{
-    grid-column: 1 / span 2;
+    grid-column: 2 / span 2;
     grid-row: 3;
 }
 
 .support1{
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 4;
-    background-color: #ff0000;
 }
 
 .support2{
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 4;
-    background-color: #ff0000;
 }
 
 .main2{
-    grid-column: 1 / span 2;
-    grid-row: 5;
+    grid-column: 1;
+    grid-row: 3 / span 2;
 }
 
 .sidenav{
     grid-column: 3;
-    grid-row: 3 / span 3;
-    background-color: #ff0000;
+    grid-row: 2;
 }
