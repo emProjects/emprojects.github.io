@@ -6,10 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TALI</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .grid-container{
+        display: grid;
+        grid-template-columns:25% 25% 25% 25%;
+        grid-gap:10px;
+      }
+      .grid-item{
+        background-color:white;
+        padding:20px;
+        color:black;
+      } 
+      .navmenu{
+        grid-column:1 / span 4;
+        grid-row:1;
+      }
+      .floor1{
+        grid-row:2;
+        grid-column:2 / span 2;
+        text-align: center;
+      }
+      .theater{
+        grid-row:3;
+        grid-column:1 / span 2;
+      }
+      .theatertxt{
+        grid-row:3;
+        grid-column:3 / span 2;
+      }    
+      .atriumtxt{
+        grid-row:4;
+        grid-column:1;
+      }
+      .atrium{
+        grid-row:4;
+        grid-column:2;
+      }
+    </style>
 </head>
 <body>
     <h1 style="text-align: center;">TALI Building</h1>
-    <div class="grid-item navmenu">
+    <div class="grid-container">
+      <div class="grid-item navmenu">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li class="active"><a href="tali.html">TALI</a></li>
@@ -17,6 +55,12 @@
             <li><a href="tmac.html">TMAC</a></li>
             <li><a href="lpc.html">LPC</a></li>
         </ul>
+      </div>
+      <div class="grid-item floor1"><h2>First Floor</h2></div>
+      <div class="grid-item theater"><img src="" alt="TALI theater"></div>
+      <div class="grid-item theatertxt"><p>The theater is located on the first floor of TALI. It is the location for EagleCon, concerts, plays and musicals.</p></div>
+      <div class="grid-item atriumtxt">The atrium is a space in TALI...</div>
+      <div class="grid-item atrium"><img src="" alt="TALI atrium"></div>
     </div>
     <style>
         .footer {
