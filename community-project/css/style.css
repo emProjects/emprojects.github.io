@@ -1,10 +1,36 @@
 h1, h2, h3{
-    color:navy;
+    color:rgb(18, 29, 60);
 }
 
 body{
     background-color: #ffffff;
-    color: white;
+}
+
+p{
+    font-family: "arboria", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2, h3{
+    font-family: "dejanire-headline", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3{
+    text-align: left;
+}
+
+
+h1{
+    font-family: "dejanire-headline", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 ul {
@@ -12,7 +38,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #414141;
+    background-color:rgb(25, 39, 81) ;
 }
 
 .navmenu{
@@ -34,9 +60,18 @@ li a {
 }
   
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: rgb(255, 184, 6);
 }
   
 .active {
-    background-color: #6f6f6f;
+    background-color:rgb(255, 184, 6);
 }
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(25, 39, 81);
+    color: white;
+    text-align: center;
+  }
