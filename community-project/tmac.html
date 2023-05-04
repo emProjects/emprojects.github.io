@@ -5,19 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMAC</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="grid-item navmenu"></div>
+    <style>
+            .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #414141;
+            color: white;
+            text-align: center;
+            }
+
+            .grid-container{
+                display:grid;
+                grid-template-columns: 30% 20% 30% 20%;
+                grid-gap: 10px;
+            }
+
+            .grid-item{
+                background-color: #e2c9f7;
+                text-align: center;
+                font-size:medium;
+                padding:20px;
+            }
+
+            .ww{
+                background-color: #2e1d3c;
+                text-align: center;
+                font-size:medium;
+                padding:20px;
+            }
+
+        </style>
+        
+        <div class="footer">
+          <p>Evan Meltzer</p>
+        </div>
+    </style>
+
+    <div class="grid-item navmenu">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="tali.html">TALI</a></li>
             <li><a href="outside.html">Outside</a></li>
             <li class="active"><a href="tmac.html">TMAC</a></li>
-            <li><a href="lpc.html">TMAC</a></li>
+            <li><a href="lpc.html">LPC</a></li>
         </ul>
     </div>
-    <h1>TMAC</h1>
-    <h2>First Floor</h2>
-    <h2>First Floor</h2>
+
+    <div class="grid-item main-header"><h1>TMAC</h1></div>
+    
+    <div class="grid-item basement-header"><h2>Basement</h2></div>
+    <div class="grid-item basement-image1"><h3>Image1</h3></div>
+    <div class="grid-item basement-image2"><h3>Image2</h3></div>
+    <div class="grid-item basement-content1"><h3>Tech Lab</h3></div>
+    <div class="grid-item basement-content2"><h3>Amphitheater</h3></div>
+
+    <div class="grid-item floor1-header"><h2>First Floor</h2></div>
+    <div class="grid-item floor1-image1"><h3>Image1</h3></div>
+    <div class="grid-item floor1-content1"><h3>Chem Room</h3></div>
+
+    <div class="grid-item floor2-header"><h2>Second Floor</h2></div>
+    <div class="grid-item floor2-image1"><h3>Image1</h3></div>
+    <div class="grid-item floor2-image2"><h3>Image2</h3></div>
+    <div class="grid-item floor2-content1"><h3>Biology Lab</h3></div>
+    <div class="grid-item floor2-content2"><h3>Lounge</h3></div>
+
+    <div class="grid-item floor3-header"><h2>Third and Fourth Floor</h2></div>
+    <div class="grid-item floor3-image1"><h3>Image1</h3></div>
+    <div class="grid-item floor3-image2"><h3>Image2</h3></div>
+    <div class="grid-item floor3-content1"><h3>Gymnasium</h3></div>
+    <div class="grid-item floor3-content2"><h3>Mazzanine</h3></div>
+
 </body>
 </html>
