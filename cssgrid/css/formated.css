@@ -1,6 +1,6 @@
 body{
     background-color: #c7aee7;
-    color: white;
+    color: rgb(255, 0, 0);
 }
 
 h1, p, li{
@@ -38,7 +38,7 @@ li a:hover:not(.active) {
 .grid-container{
     display:grid;
     grid-template-columns: 35% 35% 30%;
-    grid-gap: 10px;
+    grid-gap: 100000px;
 }
 
 .grid-item{
