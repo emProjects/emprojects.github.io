@@ -8,13 +8,14 @@ body{
 
 p{
     font-family: "arboria", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
+    font-size: large;
 }
 
 li{
     font-family: "arboria", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
 }
 
