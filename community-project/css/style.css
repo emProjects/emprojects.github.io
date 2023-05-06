@@ -74,7 +74,7 @@ li a:hover:not(.active) {
     background-color:rgb(255, 184, 6);
 }
 .footer {
-    position: fixed;
+    position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
