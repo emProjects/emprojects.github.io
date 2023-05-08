@@ -6,10 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMAC</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+
     <style>
-            .footer {
+        h1{
+            font-size: 60px;
+        }
+
+        h2{
+            font-size: 32px;
+        }
+
+        h3{
+            font-size: 25px;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer {
             position: fixed;
             left: 0;
             bottom: 0;
@@ -17,52 +34,160 @@
             background-color: #414141;
             color: white;
             text-align: center;
-            }
+        }
 
-            .grid-container{
-                display:grid;
-                grid-template-columns: 30% 20% 30% 20%;
-                grid-gap: 10px;
-            }
+        .header-line {
+            /*NEW FEATURE*/
+            border-color: rgb(67, 100, 192);
+        }
 
-            .grid-item{
-                background-color: #e2c9f7;
-                text-align: center;
-                font-size:medium;
-                padding:20px;
-            }
+        .grid-container{
+            display:grid;
+            grid-template-columns: 20% 10% 18.5% 20% 10% 21.5%;
+            grid-gap: 10px;
+        }
 
-            .basement-header{
-                grid-column: 1 / span 4;
-                grid-row: 2;
-            }
+        .grid-item{
+            background-color: white;
+            text-align: center;
+            font-size:medium;
+            padding:15px;
+            overflow: hidden;
+        }
 
-            .basement-image1{
-                grid-column: 1;
-                grid-row: 3;
-            }
-            
-            .basement-content1{
-                grid-column: 2;
-                grid-row: 3;
-            }
+        .main-header{
+            grid-column: 1 / span 6;
+            grid-row: 1;
+            margin-right: 50px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            margin: -8px 42px 0px -8px;
+        }
 
-            .basement-image2{
-                grid-column: 3;
-                grid-row: 3;
-            }
+        .header-text{
+            margin:0;
+            position: absolute;
+        }
 
-            .basement-content2{
-                grid-column: 4;
-                grid-row: 3;
-            }
+        .header-image{
+            width: 100%;
+            height: 100%;
+            /*NEW FEATURE*/
+            object-fit: cover;
+            object-position: 50% 63%;
+            opacity: 0.5;
+        }
 
-        </style>
+        .navmenu{
+            grid-column: 1 / span 6;
+            grid-row: 2;
+            margin-right: 42px;
+            margin-top: -10px;
+            margin-left: -8px;
+            padding: 0px 0px 15px 0px;
+        }
+
+        .basement-header{
+            grid-column: 1 / span 6;
+            grid-row: 3;
+            margin-right: 50px;
+        }
+
+        .basement-image1{
+            grid-column: 1 / span 2;
+            grid-row: 4;
+        }
         
-        <div class="footer">
-          <p>Evan Meltzer</p>
-        </div>
+        .basement-content1{
+            grid-column: 3;
+            grid-row: 4;
+            text-align: left;
+        }
+
+        .basement-image2{
+            grid-column: 4 / span 2;
+            grid-row: 4;
+        }
+
+        .basement-content2{
+            grid-column: 6;
+            grid-row: 4;
+            margin-right: 50px;
+            text-align: left;
+        }
+
+        .floor1-header{
+            grid-column: 1 / span 3;
+            grid-row: 5;
+        }
+
+        .floor2-header{
+            grid-column: 4 / span 3;
+            grid-row: 5;
+            margin-right: 50px;
+        }
+
+        .floor1-content1{
+            grid-column: 1;
+            grid-row: 6;
+            text-align: left;
+        }
+
+        .floor1-image1{
+            grid-column: 2 / span 2;
+            grid-row: 6;
+        }
+
+        .floor2-content1{
+            grid-column: 4;
+            grid-row: 6;
+            text-align: left;
+        }
+
+        .floor2-image1{
+            grid-column: 5 / span 2;
+            grid-row: 6;
+            margin-right: 50px;
+        }
+
+        .floor3-header{
+            grid-column: 1 / span 6;
+            grid-row: 7;
+            margin-right: 50px;
+        }
+
+        .floor3-image1{
+            grid-column: 1 / span 2;
+            grid-row: 8;
+        }
+        
+        .floor3-content1{
+            grid-column: 3;
+            grid-row: 8;
+            text-align: left;
+        }
+
+        .floor3-image2{
+            grid-column: 4 / span 2;
+            grid-row: 8;
+        }
+
+        .floor3-content2{
+            grid-column: 6;
+            grid-row: 8;
+            margin-right: 50px;
+            text-align: left;
+        }
+
     </style>
+</head>
+<body>     
+    <div class="footer">
+        <p>Evan Meltzer</p>
+    </div>    
 
     <div class="grid-container">
     
@@ -76,31 +201,52 @@
             </ul>
         </div>
 
-        <div class="grid-item main-header"><h1>TMAC</h1></div>
+        <div class="grid-item main-header">
+            <img class="header-image" src="images/tmac.jpg">
+            <h1 class="header-text">TMAC</h1>
+        </div>
         
-        <div class="grid-item basement-header"><h2>Basement</h2></div>
-        <div class="grid-item basement-image1"><h3>Image1</h3></div>
-        <div class="grid-item basement-image2"><h3>Image2</h3></div>
-        <div class="grid-item basement-content1"><h3>Tech Lab</h3></div>
-        <div class="grid-item basement-content2"><h3>Amphitheater</h3></div>
+        <div class="grid-item basement-header"><!--NEW FEATURE--><hr class="header-line"><h2>Basement</h2><hr class="header-line"></div>
+        <div class="grid-item basement-image1"><img src="images/sports.jpg"></div>
+        <div class="grid-item basement-image2"><img src="images/amphitheater.jpg"></div>
+        <div class="grid-item basement-content1">
+            <h3>Tech Lab</h3>
+            <p>From having computer problems to wanting to build a cool robot, the tech lab is the place to go. The tech lab is home to EPS's maker space, which is equipped with 3D printers, laser cutters, arduino components and much more. For many years, this space also oversaw Fusor, a project hoping to achieve nuclear fusion in TMAC's own basement. Clubs, including robotics, regularly meet in this space.</p>
+        </div>
+        <div class="grid-item basement-content2">
+            <h3>Amphitheater</h3>
+            <p>Upon entering TMAC, you are immediately greeted by the amphitheater. This space is used for class meetings, guest speakers, and general assemblies. At times, the stage of the amphitheater is used to set up arenas for robotics competitions. Additionally, before TALI was built, the amphitheater was used as the school's theater.</p>
+        </div>
 
-        <div class="grid-item floor1-header"><h2>First Floor</h2></div>
-        <div class="grid-item floor1-image1"><h3>Image1</h3></div>
-        <div class="grid-item floor1-content1"><h3>Chem Room</h3></div>
+        <div class="grid-item floor1-header"><hr class="header-line"><h2>First Floor</h2><hr class="header-line"></div>
+        <div class="grid-item floor1-image1"><img src="images/sports.jpg"></div>
+        <div class="grid-item floor1-content1">
+            <h3>Chem Room</h3>
+            <p>The first floor of TMAC only has a couple classrooms, but the chemistry lab is an important lab. The chemistry lab contains an isolated experiment chamber, six lab stations, and a whole lot of dangerous chemicals. If you ever take chemistry, advanced chemistry, or organic chemistry, you will find yourself in this room.</p>
+        </div>
 
-        <div class="grid-item floor2-header"><h2>Second Floor</h2></div>
-        <div class="grid-item floor2-image1"><h3>Image1</h3></div>
-        <div class="grid-item floor2-image2"><h3>Image2</h3></div>
-        <div class="grid-item floor2-content1"><h3>Biology Lab</h3></div>
-        <div class="grid-item floor2-content2"><h3>Lounge</h3></div>
+        <div class="grid-item floor2-header"><hr class="header-line"><h2>Second Floor</h2><hr class="header-line"></div>
+        <div class="grid-item floor2-image1"><img src="images/biology.webp" style="object-position: 75% 50%;"></div>
+        <div class="grid-item floor2-content1">
+            <h3>Biology Lab</h3>
+            <p>The second floor of TALI is home to one of two biology labs on the EPS campus. The biology lab is equipped with tools needed to conduct many experimental setups, ranging from calorimetry to PCR. Similarly to the chem lab, there are also six lab stations. You are lickely to have a class in this room if you take biology or advanced biology.</p>
+        </div>
 
-        <div class="grid-item floor3-header"><h2>Third and Fourth Floor</h2></div>
-        <div class="grid-item floor3-image1"><h3>Image1</h3></div>
-        <div class="grid-item floor3-image2"><h3>Image2</h3></div>
-        <div class="grid-item floor3-content1"><h3>Gymnasium</h3></div>
-        <div class="grid-item floor3-content2"><h3>Mazzanine</h3></div>
+        <div class="grid-item floor3-header"><hr class="header-line"><h2>Third and Fourth Floor</h2><hr class="header-line"></div>
+        <div class="grid-item floor3-image1"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/AlfRk1GDNLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="grid-item floor3-image2"><img src="images/sports.jpg"></div>
+        <div class="grid-item floor3-content1">
+            <h3>Gymnasium</h3>
+            <p>The gymansium is one of the most verstalile spaces on the EPS campus. Using different markings on the floor and a combination of nets, hoops, and balls, the space can be transformed between courts for basketball, volleyball, handball, and much more. You will likely spend time in the gym, either when completing PE credits or if you participate in an extracurricular sport.</p>
+        </div>
+        <div class="grid-item floor3-content2">
+            <h3>Mazzanine</h3>
+            <p>Located in a balcony connected to the gymnasium, the mezzanine is equipped with anything you may need for personalized training. Pull up bars, weight lifting machines, treadmills, and work-out equipment line the walls. It is worth noting that the mezzanine is only accessible during clubs time, PE classes, extracurricular sports, or by special request.</p>
+        </div>
 
     </div>
+
+    <br><br><br><br>
 
 </body>
 </html>

@@ -6,46 +6,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPC</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <style>
-        .footer {
-          position: fixed;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          background-color: #414141;
-          color: white;
-          text-align: center;
-        }
-        </style>
-        
-        <div class="footer">
-          <p>Evan Meltzer</p>
-        </div>
-    </style>
 
-    <div class="grid-item navmenu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="tali.html">TALI</a></li>
-            <li><a href="outside.html">Outside</a></li>
-            <li><a href="tmac.html">TMAC</a></li>
-            <li class="active"><a href="lpc.html">LPC</a></li>
-        </ul>
+    <style>
+        h1{
+            font-size: 60px;
+        }
+
+        h2{
+            font-size: 32px;
+        }
+
+        h3{
+            font-size: 25px;
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        table {
+            font-family: "Segoe UI";
+            border-collapse: collapse;
+            width: 100%;
+            margin: auto;
+        }
+        table td, #light-chart th {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: left;
+        }
+        table tr:nth-child(even){background-color: #f2f2f2;}
+        table th {
+            padding: 20px;
+            background-color: rgb(28, 48, 108);
+            color: white;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #414141;
+            color: white;
+            text-align: center;
+        }
+
+        .header-line {
+            border-color: rgb(67, 100, 192);
+        }
+
+        .grid-container{
+            display:grid;
+            grid-template-columns: 20% 10% 18.5% 20% 10% 21.5%;
+            grid-gap: 10px;
+        }
+
+        .grid-item{
+            background-color: white;
+            text-align: center;
+            font-size:medium;
+            padding:15px;
+            overflow: hidden;
+        }
+
+        .main-header{
+            grid-column: 1 / span 6;
+            grid-row: 1;
+            margin-right: 50px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+            margin: -8px 42px 0px -8px;
+        }
+
+        .header-text{
+            margin:0;
+            position: absolute;
+        }
+
+        .header-image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 60%;
+            opacity: 0.5;
+        }
+
+        .navmenu{
+            grid-column: 1 / span 6;
+            grid-row: 2;
+            margin-right: 42px;
+            margin-top: -10px;
+            margin-left: -8px;
+            padding: 0px 0px 15px 0px;
+        }
+
+        .floor1-header{
+            grid-column: 1 / span 6;
+            grid-row: 3;
+            margin-right: 50px;
+        }
+
+        .floor1-image1{
+            grid-column: 1 / span 2;
+            grid-row: 4;
+        }
+        
+        .floor1-content1{
+            grid-column: 3;
+            grid-row: 4;
+            text-align: left;
+        }
+
+        .floor1-image2{
+            grid-column: 4 / span 2;
+            grid-row: 4;
+        }
+
+        .floor1-content2{
+            grid-column: 6;
+            grid-row: 4;
+            margin-right: 50px;
+            text-align: left;
+        }
+
+        .floor2-header{
+            grid-column: 1 / span 6;
+            grid-row: 5;
+            margin-right: 50px;
+        }
+
+        .floor2-content1{
+            grid-column: 1;
+            grid-row: 6;
+            text-align: left;
+        }
+
+        .floor2-image1{
+            grid-column: 2 / span 2;
+            grid-row: 6;
+        }
+
+        .floor2-content2{
+            grid-column: 4;
+            grid-row: 6;
+            text-align: left;
+        }
+
+        .floor2-image2{
+            grid-column: 5 / span 2;
+            grid-row: 6;
+            margin-right: 50px;
+        }
+
+    </style>
+</head>
+<body>     
+    <div class="footer">
+        <p>Evan Meltzer</p>
+    </div>    
+
+    <div class="grid-container">
+    
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tali.html">TALI</a></li>
+                <li><a href="outside.html">Outside</a></li>
+                <li><a href="tmac.html">TMAC</a></li>
+                <li class="active"><a href="lpc.html">LPC</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item main-header">
+            <img class="header-image" src="images/eating.jpg">
+            <h1 class="header-text">LPC</h1>
+        </div>
+        
+        <div class="grid-item floor1-header"><hr class="header-line"><h2>First Floor</h2><hr class="header-line"></div>
+        <div class="grid-item floor1-image1">
+            <table>
+                <tr>
+                  <th>Weekday</th>
+                  <th>Meal</th>
+                </tr>
+                <tr>
+                  <td>Monday</td>
+                  <td>Spaghetti and Meatballs</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>Blackened Salmon</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>Chicken Curry</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>Beef Lo Mein</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>Chicken Strips</td>
+                </tr>
+              </table>
+        </div>
+        <div class="grid-item floor1-image2"><img src="images/amphitheater.jpg"></div>
+        <div class="grid-item floor1-content1">
+            <h3>Cafeteria</h3>
+            <p>The LPC cafeteria is a large open-plan space that seats several hundred students at a time. The dining staff prepare a wide variety of meals and snacks, always offering dietary inclusive options. This week's meal schedule is displayed to the left. You will likely find yourself eating, studying, or chatting here every day.</p>
+        </div>
+        <div class="grid-item floor1-content2">
+            <h3>Patio</h3>
+            <p>New to EPS this year is the covered dining patio. The patio is complete with heating, glass walls, and a skylight, making it a great place to be outdoors while still feeling comfortable regardless of the weather. If you want to eat lunch on the patio, I suggest you hurry because seats fill up fast!</p>
+        </div>
+
+        <div class="grid-item floor2-header"><hr class="header-line"><h2>Second Floor</h2><hr class="header-line"></div>
+        <div class="grid-item floor2-image1"><img src="images/sports.jpg"></div>
+        <div class="grid-item floor2-content1">
+            <h3>Yoga Studio</h3>
+            <p>The yoga studio is a peaceful space on campus that you can use whenever you need a breath of fresh air or to clear your head. You can also practice your meditation skills in this space if you elect to take a yoga class for a PE credit. Whatever you do, do not wear dirty shoes onto the fancy wooden floor!</p>
+        </div>
+
+        <div class="grid-item floor2-image2"><img src="images/sports.jpg"></div>
+        <div class="grid-item floor2-content2">
+            <h3>Library</h3>
+            <p>Filled with books from floor to ceiling, the library is a great spot for quiet studying or relaxation. When you enter upper school, you are allowed to check-out unlimited books for free with your student ID. After you have checked-out your favorite book, you can start reading it while getting comfy on one of many couches or bean bags.</p>
+        </div>
+
     </div>
 
-    <h1>LPC</h1>
+    <br><br><br><br>
 
-    <h2>First Floor</h2>
-    <h3>Dining Area</h3>
-    <h3>Kitchen</h3>
-    <h3>Conference Rooms</h3>
-
-    <h2>Second Floor</h2>
-    <h3>Library</h3>
-    <h3>Yoga Studio</h3>
-
-    <h2>Outdoor Patio</h2>
 </body>
 </html>
