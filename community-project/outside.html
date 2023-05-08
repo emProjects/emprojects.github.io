@@ -4,12 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outisde</title>
+    <title>Outside</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .grid-container{
+        display: grid;
+        grid-template-columns:25% 25% 25% 25%;
+        grid-gap:10px;
+      }
+      .grid-item{
+        background-color:white;
+        padding:20px;
+        color:black;
+      } 
+      .navmenu{
+        grid-column:1 / span 4;
+        grid-row:1;
+      }
+      .sprtcrttxt{
+        grid-row:2;
+        grid-column:1 / span 2;
+      }
+      .sprtcrt{
+        grid-row:2;
+        grid-column:3 / span 2;
+      }
+      .parking{
+        grid-row:3;
+        grid-column:1 / span 2;
+      }
+      .parkingtxt{
+        grid-row:3;
+        grid-column: 3 / span 2;
+      }
+      .tablestxt{
+        grid-row:4;
+        grid-column:1 / span 2;
+      }
+      .tables{
+        grid-row:4;
+        grid-column:3 / span 2;
+      }
+    </style>
 </head>
 <body>
     <h1 style="text-align: center;">Outside the Buildings</h1>
-    <div class="grid-item navmenu">
+    <div class="grid-container">
+      <div class="grid-item navmenu">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="tali.html">TALI</a></li>
@@ -17,7 +58,13 @@
             <li><a href="tmac.html">TMAC</a></li>
             <li><a href="lpc.html">LPC</a></li>
         </ul>
-    </div>
+      </div>
+      <div class="grid-item sprtcrttxt"><p>The sport court is located behind TALI and TMAC when you are looking at the buildings from the entrance to the school. It is where drop off and pick up happen and is a hub for community bonding and fun during lunch, middle bands, and free periods.</p></div>
+      <div class="grid-item sprtcrt"><img src="" alt="sport court"></div>
+      <div class="grid-item parking"><img src="" alt="parking spaces"></div>
+      <div class="grid-item parkingtxt"><p>The outside parking spaces are located at the entrance to the school from Northeast 38th Place. They are great for senior and sometimes junior parking. There are also spaces for guests to the school, guests of the head of school, and more. It is also the location of the school and sports buses.</p></div>
+      <div class="grid-item tablestxt"><p>There are tables located in between TALI, TMAC, and the LPC where students can do work, eat lunch, and hang out.</p></div>
+      <div class="grid-item tables"><img src="" alt="outside tables"></div>
     <style>
         .footer {
           position: fixed;
