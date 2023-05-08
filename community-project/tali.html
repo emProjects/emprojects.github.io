@@ -17,110 +17,115 @@
         padding:20px;
         color:black;
       } 
+      .talibuild{
+        grid-column:1;
+        grid-row: 1 / span 4;
+        text-align: center;
+      }
       .navmenu{
         grid-column:1 / span 4;
-        grid-row:1;
+        grid-row:2;
       }
       .floor1{
-        grid-row:2;
+        grid-row:3;
         grid-column:2 / span 2;
         text-align: center;
       }
       .theater{
-        grid-row:3;
+        grid-row:4;
         grid-column:1 / span 2;
       }
       .theatertxt{
-        grid-row:3;
+        grid-row:4;
         grid-column:3 / span 2;
       }    
       .atriumtxt{
-        grid-row:4;
+        grid-row:5;
         grid-column:1;
       }
       .atrium{
-        grid-row:4;
+        grid-row:5;
         grid-column:2;
       }
       .frontdesktxt{
-        grid-row:4;
+        grid-row:5;
         grid-column:3;
       }
       .frontdesk{
-        grid-row:4;
+        grid-row:5;
         grid-column:4;
       }
       .floor2{
-        grid-row:5;
+        grid-row:6;
         grid-column:2 / span 2;
       }
       .balcony{
-        grid-row:6;
+        grid-row:7;
         grid-column:1 / span 2;
       }
       .harkness{
-        grid-row:6;
+        grid-row:7;
         grid-column:3 / span 2;
       }
       .balconytxt{
-        grid-row:7;
+        grid-row:8;
         grid-column:1 / span 2;
       }
       .harknesstxt{
-        grid-row:7;
+        grid-row:8;
         grid-column:3 / span 2;
       }
       .floor3{
-        grid-row:8;
+        grid-row:9;
         grid-column:2 / span 2;
       }
       .studytxt{
-        grid-row:9;
+        grid-row:10;
         grid-column:1 / span 2;
       }
       .study{
-        grid-row:9;
+        grid-row:10;
         grid-column:3 / span 2;
 
       }
       .music{
-        grid-row:10;
+        grid-row:11;
         grid-column:1;
       }
       .musictxt{
-        grid-row:10;
+        grid-row:11;
         grid-column:2;
       }
       .science{
-        grid-row:10;
+        grid-row:11;
         grid-column:3;
       }
       .sciencetxt{
-        grid-row:10;
+        grid-row:11;
         grid-column:4;
       }
       .floor4{
-        grid-row:11;
+        grid-row:12;
         grid-column:2 / span 2;
       }
       .spanishtxt{
-        grid-row:12;
+        grid-row:13;
         grid-column:1 / span 2;
       }
       .officetxt{
-        grid-row:12;
+        grid-row:13;
         grid-column:3 / span 2;
       }
       .spanish{
-        grid-row:13;
+        grid-row:14;
         grid-column:1 / span 2;
       }
       .office{
-        grid-row:13;
+        grid-row:14;
         grid-column:3 / span 2;
       }
       .break{
-        grid-row:14 / span 3;
+        grid-row:15 / span 3;
         grid-column:1 / span 4;
       }
       table,
@@ -133,11 +138,23 @@
       th{
         background-color:rgb(255, 184, 6); ;
       }
+      h3{
+        font-size:25px;
+      }
+      h2{
+        font-size:32px;
+      }
+      .table{
+        box-shadow: 5px 5px rgb(25, 39, 81);
+        <!--NEW FEATURE--> 
+      }
     </style>
 </head>
-<body>
-    <h1 style="text-align: center;">TALI Building</h1>
+<body> 
     <div class="grid-container">
+      <div>
+        <h1 style="text-align:center;" class="talibuild">TALI Building</h1>
+      </div>
       <div class="grid-item navmenu">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -149,8 +166,8 @@
       </div>
       <div class="grid-item floor1"><h2>First Floor</h2></div>
       <div class="grid-item theater"><img src="images/theater.png" alt="TALI theater" style="width:100%"></div>
-      <div class="grid-item theatertxt"><p>The theater is located on the first floor of TALI. It is the location for concerts, plays and musicals. It a large space and is sometimes used for dances. Middle school assemblies and upperschool EagleCons happen in the theater during middlebands. Here is the upperschool 2023 middleband schedule:</p>
-        <table style="font-size: 20px;">
+      <div class="grid-item theatertxt"><h3>The Theater</h3><p>The theater is located on the first floor of TALI. It is the location for concerts, plays and musicals. It a large space and is sometimes used for dances. Middle school assemblies and upperschool EagleCons happen in the theater during middlebands. Here is the upperschool 2023 middleband schedule:</p>
+        <table style="font-size: 20px;" class="table">
           <tr>
             <th>Monday</th>
             <th>Tuesday</th>
@@ -167,28 +184,27 @@
           </tr>
         </table>
     </div>
-      <div class="grid-item atriumtxt"><p>The atrium is a space in TALI where students can study on the couches, enter the theater, and meet as grades. It is commonly used as a space to put backpacks before an assembly.</p></div>
+      <div class="grid-item atriumtxt"><h3>The Atrium</h3><p>The atrium is a space in TALI where students can study on the couches, enter the theater, and meet as grades. It is commonly used as a space to put backpacks before an assembly.</p></div>
       <div class="grid-item atrium"><img src="images/TALI.png" alt="TALI atrium" style="width:100%"></div>
-      <div class="grid-item frontdesktxt"><p>The front desk is located through the front door of TALI, next to the college counseling offices and the meeting room with the window walls. You can sign in and out of school, find valuable lost items, or just chat with Mr. Hockert (right) here.</p></div>
+      <div class="grid-item frontdesktxt"><h3>The Front Desk</h3><p>The front desk is located through the front door of TALI, next to the college counseling offices and the meeting room with the window walls. You can sign in and out of school, find valuable lost items, or just chat with Mr. Hockert (right) here.</p></div>
       <div class="grid-item frontdesk"><img src="images/mr-scott.png" alt="TALI front desk" style="width:75%"></div>
       <div class="grid-item floor2"><h2>Second Floor</h2></div>
-      <div class="grid-item balcony"><img src="" alt="theater balcony"></div>
-      <div class="grid-item harkness"><img src="" alt="harkness room"></div>
-      <div class="grid-item balconytxt"><p>The theater balcony is located through a door near the left couches on the second floor. The door is labeled so you can't miss it. It is a few rows of seating that looks out onto the theater when the wall is open. It can also be used for studying when the room is free, AP testing, and class meetings.</p></div>
-      <div class="grid-item harknesstxt"><p>The harkness room is located on the left side of the second floor all the way to the back. It has a big table that is good for discussions and a TV that can be used for presentations. It's a great spot to study during a free period or have lunch with your sports teams.</p></div>
+      <div class="grid-item balcony"><img src="images/balcony.jpg" alt="theater balcony" style="width:100%"></div>
+      <div class="grid-item harkness"><img src="images/harkness.jpg" alt="harkness room" style="width:100%"></div>
+      <div class="grid-item balconytxt"><h3>Theater Balcony</h3><p>The theater balcony is located through a door near the left couches on the second floor. The door is labeled so you can't miss it. It is a few rows of seating that looks out onto the theater when the wall is open. It can also be used for studying when the room is free, AP testing, and class meetings.</p></div>
+      <div class="grid-item harknesstxt"><h3>Harkness Room</h3><p>The harkness room is located on the left side of the second floor all the way to the back. It has a big table that is good for discussions and a TV that can be used for presentations. It's a great spot to study during a free period or have lunch with your sports teams.</p></div>
       <div class="grid-item floor3"><h2>Third Floor</h2></div>
-      <div class="grid-item studytxt"><p>The quiet study space is located on the left side of the third floor through a door near the couches. Quiet study, during middle band and lunch, is a quiet space for students to study without distractions. Through doors in the quiet study area there are 2 music rooms. Learning support is also located here as well as Counselor Lorne's office.</p></div>
-      <div class="grid-item study"><img src="" alt="quiet study"></div>
-      <div class="grid-item music"><img src="" alt="music room"></div>
-      <div class="grid-item musictxt"><p>The music room is located on the opposite side as the quiet study area. It is a space used for rock orchestra, band practices, and jam sessions. It contains a plethora of instuments such as pianos, keyboards, microphones, guitars, drums, violins, xylophones, and more.</p></div>
-      <div class="grid-item science"><img src="" alt="science room"></div>
-      <div class="grid-item sciencetxt"><p>Third floor TALI has some amazing science rooms including the advanced biology and marine biology room. Eastside Prep has amazing academics and these special science rooms are part of those academics. They are located on the right, back of the third floor.</p></div>
+      <div class="grid-item studytxt"><h3>Quiet Study</h3><p>The quiet study space is located on the left side of the third floor through a door near the couches. Quiet study, during middle band and lunch, is a quiet space for students to study without distractions. Through doors in the quiet study area there are 2 music rooms. Learning support is also located here as well as Counselor Lorne's office.</p></div>
+      <div class="grid-item study"><img src="images/study.jpg" alt="quiet study" style="width:100%"></div>
+      <div class="grid-item music"><img src="images/music.jpg" alt="music room" style="width:100%"></div>
+      <div class="grid-item musictxt"><h3>Music Room</h3><p>The music room is located on the opposite side as the quiet study area. It is a space used for rock orchestra, band practices, and jam sessions. It contains a plethora of instuments such as pianos, keyboards, microphones, guitars, drums, violins, xylophones, and more.</p></div>
+      <div class="grid-item science"><img src="images/science.jpg" alt="science room" style="width:100%"></div>
+      <div class="grid-item sciencetxt"><h3>Science Rooms</h3><p>Third floor TALI has some amazing science rooms including the advanced biology and marine biology room. Eastside Prep has amazing academics and these special science rooms are part of those academics. They are located on the right, back of the third floor.</p></div>
       <div class="grid-item floor4"><h2>Fourth Floor</h2></div>
-      <div class="grid-item spanishtxt"><p>A couple Spanish classrooms are located on the fourth floor. There are only two classrooms on all of the fourth floor and they are both used for Spanish. If you are taking Spanish, you'll most likley have to take the hike up to the fourth floor! However, they are also used for clubs, such as yearbook, EBC meetings, and testing spaces.</p></div>
-      <div class="grid-item officetxt"><p>There are also a few offices and conference rooms on the fourth floor. There are some hidden offices at the back of the hallway with the Spanish rooms and some obvious conference rooms right at the exit of one of the staircases. They are used for board meetings, interviews, and more.</p></div>
-      <div class="grid-item spanish"><img src="" alt="spanish room"></div>
-      <div class="grid-item office"><img src="" alt="4th floor offices"></div>
-      <div class="break"><p>   </p></div>
+      <div class="grid-item spanishtxt"><h3>Spanish Rooms</h3><p>A couple Spanish classrooms are located on the fourth floor. There are only two classrooms on all of the fourth floor and they are both used for Spanish. If you are taking Spanish, you'll most likley have to take the hike up to the fourth floor! However, they are also used for clubs, such as yearbook, EBC meetings, and testing spaces.</p></div>
+      <div class="grid-item officetxt"><h3>Offices and Conference Rooms</h3><p>There are also a few offices and conference rooms on the fourth floor. There are some hidden offices at the back of the hallway with the Spanish rooms and some obvious conference rooms right at the exit of one of the staircases. They are used for board meetings, interviews, and more.</p></div>
+      <div class="grid-item spanish"><img src="images/spanish.jpg" alt="spanish room" style="width:100%"></div>
+      <div class="grid-item office"><img src="images/office.jpg" alt="4th floor offices" style="width:100%"></div>
     </div>
     <style>
         .footer {
@@ -196,7 +212,7 @@
           left: 0;
           bottom: 0;
           width: 100%;
-          background-color: #414141;
+          background-color:rgb(25, 39, 81);
           color: white;
           text-align: center;
         }
