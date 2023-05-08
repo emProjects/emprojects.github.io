@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMAC</title>
+    <title>LPC</title>
     <link rel="stylesheet" href="css/style.css">
 
     <style>
@@ -24,6 +24,24 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        table {
+            font-family: "Segoe UI";
+            border-collapse: collapse;
+            width: 100%;
+            margin: auto;
+        }
+        table td, #light-chart th {
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: left;
+        }
+        table tr:nth-child(even){background-color: #f2f2f2;}
+        table th {
+            padding: 20px;
+            background-color: rgb(28, 48, 108);
+            color: white;
         }
 
         .footer {
@@ -75,7 +93,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: 50% 63%;
+            object-position: 50% 60%;
             opacity: 0.5;
         }
 
@@ -166,33 +184,60 @@
         </div>
 
         <div class="grid-item main-header">
-            <img class="header-image" src="images/tmac.jpg">
-            <h1 class="header-text">TMAC</h1>
+            <img class="header-image" src="images/eating.jpg">
+            <h1 class="header-text">LPC</h1>
         </div>
         
         <div class="grid-item floor1-header"><hr class="header-line"><h2>First Floor</h2><hr class="header-line"></div>
-        <div class="grid-item floor1-image1"><img src="images/sports.jpg"></div>
+        <div class="grid-item floor1-image1">
+            <table>
+                <tr>
+                  <th>Weekday</th>
+                  <th>Meal</th>
+                </tr>
+                <tr>
+                  <td>Monday</td>
+                  <td>Spaghetti and Meatballs</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>Blackened Salmon</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>Chicken Curry</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>Beef Lo Mein</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>Chicken Strips</td>
+                </tr>
+              </table>
+        </div>
         <div class="grid-item floor1-image2"><img src="images/amphitheater.jpg"></div>
         <div class="grid-item floor1-content1">
-            <h3>Dining Hall</h3>
-            <p>From having computer problems to wanting to build a cool robot, the tech lab is the place to go. The tech lab is home to EPS's maker space, which is equipped with 3D printers, laser cutters, arduino components and much more. For many years, this space also oversaw Fusor, a project hoping to achieve nuclear fusion in TMAC's own basement. Clubs, including robotics, regularly meet in this space.</p>
+            <h3>Cafeteria</h3>
+            <p>The LPC cafeteria is a large open-plan space that seats several hundred students at a time. The dining staff prepare a wide variety of meals and snacks, always offering dietary inclusive options. This week's meal schedule is displayed to the left. You will likely find yourself eating, studying, or chatting here every day.</p>
         </div>
         <div class="grid-item floor1-content2">
             <h3>Patio</h3>
-            <p>Upon entering TMAC, you are immediately greeted by the amphitheater. This space is used for class meetings, guest speakers, and general assemblies. At times, the stage of the amphitheater is used to set up arenas for robotics competitions. Additionally, before TALI was built, the amphitheater was used as the school's theater.</p>
+            <p>New to EPS this year is the covered dining patio. The patio is complete with heating, glass walls, and a skylight, making it a great place to be outdoors while still feeling comfortable regardless of the weather. If you want to eat lunch on the patio, I suggest you hurry because seats fill up fast!</p>
         </div>
 
         <div class="grid-item floor2-header"><hr class="header-line"><h2>Second Floor</h2><hr class="header-line"></div>
         <div class="grid-item floor2-image1"><img src="images/sports.jpg"></div>
         <div class="grid-item floor2-content1">
             <h3>Yoga Studio</h3>
-            <p>The first floor of TMAC only has a couple classrooms, but the chemistry lab is an important lab. The chemistry lab contains an isolated experiment chamber, six lab stations, and a whole lot of dangerous chemicals. If you ever take chemistry, advanced chemistry, or organic chemistry, you will find yourself in this room.</p>
+            <p>The yoga studio is a peaceful space on campus that you can use whenever you need a breath of fresh air or to clear your head. You can also practice your meditation skills in this space if you elect to take a yoga class for a PE credit. Whatever you do, do not wear dirty shoes onto the fancy wooden floor!</p>
         </div>
 
         <div class="grid-item floor2-image2"><img src="images/sports.jpg"></div>
         <div class="grid-item floor2-content2">
             <h3>Library</h3>
-            <p>The second floor of TALI is home to one of two biology labs on the EPS campus. The biology lab is equipped with tools needed to conduct many experimental setups, ranging from calorimetry to PCR. Similarly to the chem lab, there are also six lab stations. You are lickely to have a class in this room if you take biology or advanced biology.</p>
+            <p>Filled with books from floor to ceiling, the library is a great spot for quiet studying or relaxation. When you enter upper school, you are allowed to check-out unlimited books for free with your student ID. After you have checked-out your favorite book, you can start reading it while getting comfy on one of many couches or bean bags.</p>
         </div>
 
     </div>
