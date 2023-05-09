@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Messaround</title>
+</head>
+<body>
+    <h1>Let's learn javascript!</h1>
+    <h2>How do we do onclick events and alerts on an anchor.</h2>
+    <a href="https://eastsideprep.org" target="_blank" onclick="alert('Warning! You are navigating away from my cool page')">School Website</a>
+
+    <hr>
+    <h2>How do we display and hide text?</h2>
+    <h2>What's my secret identity?</h2>
+    <p id="secret"></p>
+    <button onclick="document.getElementById('secret').innerHTML='Hello'; document.getElementById('secret').style.display='block'">Reveal!</button>
+    <button onclick="document.getElementById('secret').style.display='none'">Hide!</button>
+    
+    <hr>
+    <h2>How do we change an image with javascript?</h2>
+    <img src="images/amphitheater.jpg" alt="light bulb off" id="myImage" style="width: 300px; height: 300px; object-fit: cover;">
+    <br>
+    <button onclick="document.getElementById('myImage').src='images/aurora.jpg'">New Image</button>
+    <button onclick="document.getElementById('myImage').src='images/amphitheater.jpg'">Old Image</button>
+
+    <hr>
+    <h2>How do we change css styles with a button?</h2>
+    <p id="alice" style="font-size: 22px;">Hi. I am Alice.</p>
+    <button onclick="document.getElementById('alice').style.color='blue'; document.getElementById('alice').style.fontSize='10px'">Cake - Eat me</button>
+    <button onclick="document.getElementById('alice').style.color='red'; document.getElementById('alice').style.fontSize='50px'">Potion - Drink me</button>
+    <button onclick="document.getElementById('alice').style.color='black'; document.getElementById('alice').style.fontSize='22px'">Granola Bar - Restore me</button>
+
+    <hr>
+    <h2>How do we return user input with a function?</h2>
+    <button onclick="askName()"> What's your name?</button>
+    <p id="ask-name"></p>
+
+    <hr>
+    <h2>A very small minigame about making cookies.</h2>
+    <p id="cookies"></p>
+    <button onclick="numCookies=numCookies+1; document.getElementById('cookies').innerHTML=numCookies;">Add one cookie</button>
+
+    <hr>
+    <h2>A button that changes the style of another button!?</h2>
+    <button id="sample">Sample Button</button>
+    <br><br>
+    <button onclick="document.getElementById('sample').style.backgroundColor='green'">Make it green</button>
+
+    <script>
+        function askName(){
+            let nameParagraph = document.getElementById("ask-name");
+            let name = prompt("What is your name?");
+            // now lets decide what to do
+            if (name === "World"){
+                nameParagraph.innerHTML ="Hello World, welcome back.";
+            }
+            else {
+                nameParagraph.innerHTML = "Hello " + name +"! Nice to meet you.";
+            }
+        }
+
+        let numCookies=0;
+        document.getElementById('cookies').innerHTML=numCookies;
+        
+    </script>
+    
+</body>
+</html>
