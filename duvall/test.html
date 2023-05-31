@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Floating Banner Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/naf0jkv.css">
+</head>
+<body>
+    <button id="show-banner-btn">Show Banner</button>
+
+    <div id="floating-banner">
+        Thank you! Your response has been received!
+    </div>
+
+    <script>
+        function showFloatingBanner() {
+            var banner = document.getElementById("floating-banner");
+            banner.style.display = "block";
+
+            setTimeout(function() {
+                banner.style.opacity = "1";
+            }, 100);
+
+            setTimeout(function() {
+                banner.style.opacity = "0";
+            }, 2000);
+
+            setTimeout(function() {
+                banner.style.display = "none";
+            }, 2500);
+        }
+
+        var showBannerBtn = document.getElementById("show-banner-btn");
+        showBannerBtn.addEventListener("click", showFloatingBanner);
+        
+    </script>
+</body>
+</html>

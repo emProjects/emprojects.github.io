@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/naf0jkv.css">
+
+    <style>
+
+        /*GENERAL*/
+
+        .bgcolor-standard{
+            background-color: #F5E9D9;
+            grid-column: 1 / span 6;
+            grid-row: 4 / span 4;
+            margin: -3px -8px;
+            padding: 0;
+        }
+
+        /*HEADER*/
+
+        .headertext{
+        grid-column: 1 / span 6;
+        grid-row: 1;
+        margin: -8px;
+        padding: 0;
+        background-color: #243C5C;
+        color: #FFFBF6;
+        }
+
+        .headerimage{
+        grid-column: 1 / span 6;
+        grid-row: 2;
+        margin-right: 50px;
+        height: 275px;
+        display: flex;
+        padding: 0px;
+        margin: -8px;
+        }
+
+        .imagemain{
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 73%;
+        }
+
+        /*PUBLICATIONS*/
+        .publications-head{
+            grid-column: 2 / span 2;
+            grid-row: 4;
+            text-align: left;
+        }
+
+        .publications-head h2{
+            text-align: center;
+        }
+
+        .pub-img{
+            grid-column: 4 / span 2;
+            grid-row: 4;
+            padding-top: 100px;
+            margin-top: -50px;
+            margin-bottom: -50px;
+        }
+
+        .pub-img img {
+            width:100%;
+            height:80%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+
+        /*ACTIONS*/
+        .action1, .action2, .action3, .action4{
+            margin: 8px;
+            background-color:#005A84;
+            padding:0px;
+            color: #FFFBF6;
+        }
+
+        .question {
+            background-color:#005A84;
+            margin-bottom: 0px;
+        }
+        
+        .answer {
+            background-color:#243C5C;
+            padding-top: 20px;
+            padding-bottom: 5px;
+            margin-bottom: 0px;
+        }
+
+        .questionscroll {
+            background-color:#005A84;
+            height: 300px;
+            overflow-y: auto;
+        }
+        
+        .answerscroll {
+            background-color:#243C5C;
+            height: 300px;
+            overflow-y: auto;            
+        }
+        
+        .action1 p, .action2 p, .action3 p, .action4 p{
+            padding: 0px 20px 0px 20px;
+            text-align: left;
+        }
+        
+
+        .action1{
+            grid-column: 2;
+            grid-row: 6;
+        }
+        .action2{
+            grid-column: 3;
+            grid-row: 6;
+        }
+        .action3{
+            grid-column: 4;
+            grid-row: 6;
+        }
+        .action4{
+            grid-column: 5;
+            grid-row: 6;
+        }
+
+        button{
+            width: 70%;
+            background-color: #005A84;
+            color:#FFFBF6;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            transition-duration: 0.5s;
+        }
+
+        button:hover{
+            transition-duration: 0.5s;
+            background-color: #0C1B2F
+        }
+
+        .spacer{
+            grid-column: 1 / span 6;
+            grid-row: 7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+        <!--Navbar-->
+
+        <div class="grid-item headertext">
+            <h1>Duvall Historical Society</h1>
+        </div>
+
+        <div class="grid-item headerimage">
+            <img class="imagemain" src="images/sunset.webp" alt="A beautiful Duvall sunset">
+        </div>
+
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visit.html">Visit</a></li>
+                <li><a href="involved.html">Get Involved</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a class="active" href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item bgcolor-standard"></div>
+
+        <div class="grid-item publications-head">
+            <h2>FAQ</h2>
+            <p>Welcome to our FAQ page! Below you will find answers to frequently asked questions. Within each Q&A box, you can scroll for more info. If you would like to ask your own question, fill out the form found on the "Contact" page and we'll respond as fast as we can.</p>
+            <br>
+            <a href="contact.html">
+                <button>Ask your own question!</button>
+            </a>
+        </div>
+
+        <div class="grid-item pub-img">
+            <img src="/images/duvall.jpg" alt="Duvall sign">
+        </div>
+
+        <div class="grid-item action1">
+            <h3 class="question">Question</h3>
+            <div class="questionscroll">
+                <p>I am seeking historical information about the Cherry Valley Timber Company and its railway operation. I have seen pictures and references to Cherry Valley Timber Company, Cherry Valley Lumber Company, Cherry Valley Railway Company, and Cherry Valley Logging and Railway Company. I was hoping that you could explain the corporate structure or any connections between these Companies.</p>
+            </div>
+            <h3 class="answer">Answer</h3>
+            <div class="answerscroll">
+                <p>Briefly, the O'Neil Brothers of Stillwater, MN. and Thomas Irvine Lbr. Co., of St. Paul, bought up the holdings of the Mosher & McDonald operations in Cherry Valley in July 1901. On September 3, 1902 they filed articles of incorporation forming the Cherry Valley Logging Co. These operations were located north of the present town of Duvall. On May 31, 1904 the company was reorganized as the Cherry Valley Logging and Railway Co.<br><br>In 1907-08 the company started building another logging road from the Snoqualmie River into the woods a few miles north of Tolt (Carnation) and this road became known locally as the Stillwater Lumber Co. After a runaway log train incident on the Cherry Valley line in 1911, it was decided to close down operations here, so the rails were pulled up and the equipment moved to the Stillwater site in 1912, to enlarge those operations.<br><br>Two new companies were then formed; Cherry Valley Railway Co., on May 3, 1912 to purchase and operate the railroad properties, including the right of way, logging cars, locomotives, engine houses and the log dump. The Cherry Valley Timber Co. was formed on May 9, 1912, to govern the actual logging operations, including 13 donkey engines, cook house, bunk house, etc.<br><br>On May 20, 1912 the name of the Cherry Valley Logging and Railway Co. was changed to Lake Joy Logging and Railway Co. for purposes of the sale and to avoid confusion with the new “Cherry Valley” companies just formed. The Lake Joy operation was just a paper company and was dissolved on June 30, 1914.<br><br>On Monday, March 10, 1913 the company stopped dumping their logs into the Snoqualmie River and began shipping them over the Milwaukee Road branch through the valley to a new log dump, called "Riverview" west of Snohomish. The Milwaukee Road provided 150 Tacoma Eastern flat cars equipped with "turtle-back" log bunks and provided a regular train out of Everett, called "The Stillwater Logger", to handle the business. At its peak, Cherry Valley was shipping about 60 loads of logs daily.<br><br>In December 1915 the Cherry Valley Railway operations were absorbed into the timber company and the whole operation called Cherry Valley Timber Company. Then, on July 6, 1916, the company reorganized one final time and emerged under the name of, Cherry Valley Logging Company, the same name the original company used back in 1902.<br><br>Although there are photos of 45-ton Climax locomotive No. 2 lettered "Cherry Valley Lumber Company" there is no evidence that the name was ever used by the company. This is not unusual for this company. A Kinsey photo of the 4-spot taken in 1919, when she was new, shows her lettered for Cherry Valley Ry., even though that name had been absorbed into C.V. Tbr. Co. in December 1915.<br><br>An August 1920 builder's photo of 3-truck Shay # 2 shows it lettered for Cherry Valley Timber Co.,, even though that name had been gone four years earlier.<br><br>By 1924, Cherry Valley was moving its operations to Griffin Creek area south of Carnation and in 1927, when Weyerhaeuser was opening up its Vail operations, Cherry Valley’s equipment was moved there to expand those lines and woods operations. The last remnants of Cherry Valley's timber holdings were sold in 1939 and the company was formally dissolved at 9:00 a.m. on January 19, 1948.</p>
+            </div>
+            <div style="background-color:#243C5C; height: 10px;"></div>
+        </div>
+
+        <div class="grid-item action2">
+            <h3 class="question">Question</h3>
+            <div class="questionscroll">
+                <p>I teach 5th grade here at Cherry Valley Elementary. I am having my students create their own legend of Cherry Valley, and wondered what the actual valley was named after. I hoped you’d know.</p>
+            </div>
+            <h3 class="answer">Answer</h3>
+            <div class="answerscroll">
+                <p>Cherry Valley got its name because of all the wild cherry trees growing in the area. Let us know if you need any more information.</p>
+            </div>
+            <div style="background-color:#243C5C; height: 10px;"></div>
+        </div>
+
+        <div class="grid-item action3">
+            <h3 class="question">Question</h3>
+            <div class="questionscroll">
+                <p>I am researching the Dougherty House for a project. What was the reason that caused loggers to move the house up the hill? Was anything else moved besides the house?</p>
+            </div>
+            <h3 class="answer">Answer</h3>
+            <div class="answerscroll">
+                <p>In 1909 the railroads moved several buildings up the
+                    hill from their original Cherry Valley sites to their present
+                    sites in Duvall to build the railroads. They moved the
+                    Dougherty house to its present site in 1910. At that time 20
+                    graves were moved to the Novelty Cemetery from the old
+                    Duvall Cemetery.</p>
+            </div>
+            <div style="background-color:#243C5C; height: 10px;"></div>
+        </div>
+
+        <div class="grid-item action4">
+            <h3 class="question">Question</h3>
+            <div class="questionscroll">
+                <p>Rummaging through an antique store in Denver, Colo. this afternoon. Found a studio photograph of the 1916 Duvall High School girls basketball team and a news clipping (5/12/1916) identifying them as the "Champions of King County" with the same photo. Wondering if the society had any additional information about the team. Saw you had one photograph of the boys team from around the same time on your site. One of the boys (Button) on that team had a sister on the 1916 championship team. Thanks in advance for your correspondence.</p>
+            </div>
+            <h3 class="answer">Answer</h3>
+            <div class="answerscroll">
+                <p>Thanks for reaching out to tell us about your find! How exciting! We don't have much in the way of sports references for the early years at Cherry Valley High School. As you mentioned, we do have the boys team from 1920, and a girls team from 1922. Everything we know about these teams is provided in the notes with the photos.<br><br>We would welcome hosting your photo in our online collection, and attributing the find to you. If you would like to make it available to us via a scanned image, and provide the provenance (how you came about finding the photo, and your connection to it), we would be most happy to add it to the database. If you would like to do this, we would request the item be scanned in at a minimum of 600 dpi or higher resolution if possible.<br><br>Thank you for reaching out and letting us know about the wonderful history you have discovered!</p>
+            </div>
+            <div style="background-color:#243C5C; height: 10px;"></div>
+        </div>
+
+        <div class="spacer"><br><br></div>
+
+        <div class="grid-item footer-bg">
+        </div>
+        <div class="grid-item footer-text">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Physical Address: 26526 NE Cherry Valley Road, Duvall, WA</li>
+                <li>Mailing Address: DHS, PO Box 385, Duvall, WA 98019</li>
+                <li>Email: duvallhistoricalsociety@gmail.com</li>
+            </ul>
+            <h2>Receive our Newsletter</h2>
+            <form action="/action_page.php">
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Your email address..."><br><br>
+                <input input type="button" value="SUBMIT" onclick="showFloatingBanner()">
+            </form>
+        </div>
+        <div class="grid-item footer-map">
+            <h2>Visit Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.7354912862147!2d-121.98650042353563!3d47.7477866712032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900b3e453dae0f%3A0x4f22cc0b67f29b3b!2sDougherty%20Farmstead!5e0!3m2!1sen!2sus!4v1685327941102!5m2!1sen!2sus" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+
+    <div id="floating-banner">
+        Thank you! Your response has been received!
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

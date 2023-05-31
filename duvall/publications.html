@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/naf0jkv.css">
+
+    <style>
+
+        /*GENERAL*/
+
+        .bgcolor-standard{
+            background-color: #F5E9D9;
+            grid-column: 1 / span 6;
+            grid-row: 4 / span 4;
+            margin: -3px -8px;
+            padding: 0;
+        }
+
+        button{
+            width: 70%;
+            background-color: #005A84;
+            color:#FFFBF6;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            transition-duration: 0.5s;
+        }
+
+        button:hover{
+            transition-duration: 0.5s;
+            background-color: #0C1B2F
+        }
+        
+        /*HEADER*/
+
+        .headertext{
+        grid-column: 1 / span 6;
+        grid-row: 1;
+        margin: -8px;
+        padding: 0;
+        background-color: #243C5C;
+        color: #FFFBF6;
+        }
+
+        .headerimage{
+        grid-column: 1 / span 6;
+        grid-row: 2;
+        margin-right: 50px;
+        height: 275px;
+        display: flex;
+        padding: 0px;
+        margin: -8px;
+        }
+
+        .imagemain{
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 73.5%;
+        }
+
+        /*PUBLICATIONS*/
+        .publications-head{
+            grid-column: 2 / span 2;
+            grid-row: 4;
+            text-align: left;
+        }
+
+        .publications-head h2{
+            text-align: center;
+        }
+
+        .publications-head input[type=submit] {
+            width: 30%;
+            background-color: #005A84;
+            color:#FFFBF6;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            transition-duration: 0.5s;
+        }
+        .publications-head input[type=submit]:hover {
+            transition-duration: 0.5s;
+            background-color: #0C1B2F;
+        }
+
+        .pub-img{
+            grid-column: 4 / span 2;
+            grid-row: 4;
+            padding-top: 100px;
+            margin-top: -50px;
+            margin-bottom: -50px;
+        }
+
+        .pub-img img {
+            width:100%;
+            height:80%;
+            object-fit: cover;
+            object-position: 57.5% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+        /*ACTIONS*/
+        .action1, .action2, .action3, .action4, .action5, .action6, .action7, .action8{
+            margin: 8px;
+            background-color: #243C5C;
+            padding:0px;
+            color: #FFFBF6;
+        }
+        
+        .action1 p, .action2 p, .action3 p, .action4 p, .action5 p, .action6 p, .action7 p, .action8 p{
+            padding: 0px 20px 6px 20px;
+            text-align: left;
+        }
+
+        .action1 img, .action2 img, .action3 img, .action4 img, .action5 img, .action6 img, .action7 img, .action8 img{
+            height:420px;
+            object-fit: cover;
+        }
+
+        .action1 button, .action2 button, .action3 button, .action4 button, .action5 button, .action6 button, .action7 button, .action8 button{
+                width: 60%;
+                background-color: #f5e9d9;
+                color:#0C1B2F;
+                padding: 10px 20px;
+                margin: 22px 0px;
+                border: none;
+                border-radius: 2px;
+                cursor: pointer;
+                font-family: "proxima-nova", sans-serif;
+                font-weight: 600;
+                font-style: normal;
+                font-size: 16px;
+                transition-duration: 0.5s;
+            }
+        .action1 button:hover, .action2 button:hover, .action3 button:hover, .action4 button:hover, .action5 button:hover, .action6 button:hover, .action7 button:hover, .action8 button:hover{
+                transition-duration: 0.5s;
+                background-color: #E9CEAD;
+        }
+        
+
+        .action1{
+            grid-column: 4;
+            grid-row: 6;
+        }
+        .action2{
+            grid-column: 5;
+            grid-row: 6;
+        }
+        .action3{
+            grid-column: 2;
+            grid-row: 5;
+        }
+        .action4{
+            grid-column: 3;
+            grid-row: 5;
+        }
+        .action5{
+            grid-column: 4;
+            grid-row: 5;
+        }
+        .action6{
+            grid-column: 5;
+            grid-row: 5;
+        }
+        .action7{
+            grid-column: 2;
+            grid-row: 6;
+        }
+        .action8{
+            grid-column: 3;
+            grid-row: 6;
+        }
+
+        .spacer{
+            grid-column: 1 / span 6;
+            grid-row: 7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+        <!--Navbar-->
+
+        <div class="grid-item headertext">
+            <h1>Duvall Historical Society</h1>
+        </div>
+
+        <div class="grid-item headerimage">
+            <img class="imagemain" src="images/DoughertyHouse@2x.png" alt="historical parade">
+        </div>
+
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visit.html">Visit</a></li>
+                <li><a href="involved.html">Get Involved</a></li>
+                <li><a class="active"href="publications.html">Publications</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item bgcolor-standard"></div>
+
+        <div class="grid-item publications-head">
+            <h2>Publications</h2>
+            <p>Our publications are now digitized, word searchable and freely available in PDF format for download! If you would like to purchase a hard copy for $10, please fill out the form on the "Contact" page</p>
+            <a href="contact.html">
+                <button>Purchase Publications</button>
+            </a>
+        </div>
+
+        <div class="grid-item pub-img">
+            <img src="/images/pioneer.jpg" alt="The Dougherty house">
+        </div>
+
+        <div class="grid-item action1">
+            <h3>Digging Duvall's Past</h3>
+            <img src="/images/diggingduvall.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/Digging-Duvalls-Past.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="grid-item action2">
+            <h3>Duvall Immigrant</h3>
+            <img src="/images/duvallimmigrant.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/Duvall-Immigrant.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="grid-item action3">
+            <h3>Hi Times of the 1930s</h3>
+            <img src="/images/hitimes.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/High-Times-of-the-1930s.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="grid-item action4">
+            <h3>Wagon Wheel Volume 1</h3>
+            <img src="/images/wagonwheel1.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/Vignettes-of-Duvall-1.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="grid-item action5">
+            <h3>Wagon Wheel Volume 2</h3>
+            <img src="/images/wagonwheel2.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/Vignettes-of-Duvall-2.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="grid-item action6">
+            <h3>Wagon Wheel Volume 3</h3>
+            <img src="/images/wagonwheel3.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/Vignettes-of-Duvall-3.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="grid-item action7">
+            <h3>Just Cogatatin'</h3>
+            <img src="/images/justcogitatin.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/Jist-Cogitatinz.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="grid-item action8">
+            <h3>The Story of Duvall</h3>
+            <img src="/images/storyofduvall.png" alt="Aerial image of Duvall">
+            <a href="https://www.duvallhistoricalsociety.org/downloads/publications/The-Story-of-Duvall.pdf" target="_blank">
+                <button>Download PDF</button>
+            </a>
+        </div>
+
+        <div class="spacer"><br><br></div>
+
+        <div class="grid-item footer-bg">
+        </div>
+        <div class="grid-item footer-text">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Physical Address: 26526 NE Cherry Valley Road, Duvall, WA</li>
+                <li>Mailing Address: DHS, PO Box 385, Duvall, WA 98019</li>
+                <li>Email: duvallhistoricalsociety@gmail.com</li>
+            </ul>
+            <h2>Receive our Newsletter</h2>
+            <form action="/action_page.php">
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Your email address..."><br><br>
+                <input input type="button" value="SUBMIT" onclick="showFloatingBanner()">
+            </form>
+        </div>
+        <div class="grid-item footer-map">
+            <h2>Visit Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.7354912862147!2d-121.98650042353563!3d47.7477866712032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900b3e453dae0f%3A0x4f22cc0b67f29b3b!2sDougherty%20Farmstead!5e0!3m2!1sen!2sus!4v1685327941102!5m2!1sen!2sus" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+
+    <div id="floating-banner">
+        Thank you! Your response has been received!
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

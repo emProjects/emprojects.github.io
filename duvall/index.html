@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/naf0jkv.css">
+
+    <style>
+
+        /*GENERAL*/
+
+        .bgcolor-standard{
+            background-color: #F5E9D9;
+            grid-column: 1 / span 6;
+            grid-row: 4 / span 4;
+            margin: -3px -8px;
+            padding: 0;
+        }
+
+        button {
+            margin: -20px 0px 25px 0px;
+            width: 60%;
+            background-color: #F5E9D9;
+            color:#0C1B2F;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            transition-duration: 0.5s;
+        }
+
+        button:hover {
+            transition-duration: 0.5s;
+            background-color: #E9CEAD;
+        }
+
+        /*HEADER*/
+
+        .headertext{
+        grid-column: 1 / span 6;
+        grid-row: 1;
+        margin: -8px;
+        padding: 0;
+        background-color: #243C5C;
+        color: #FFFBF6;
+        }
+
+        .headerimage{
+        grid-column: 1 / span 6;
+        grid-row: 2;
+        margin-right: 50px;
+        height: 275px;
+        display: flex;
+        padding: 0px;
+        margin: -8px;
+        }
+
+        .imagemain{
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        /*ABOUT US*/
+        .about-us-text{
+            grid-column: 2 / span 2;
+            grid-row: 4;
+            text-align: left;
+        }
+
+        .about-us-text h2{
+            text-align: center;
+        }
+
+        .about-us-text p{
+            text-align: left;
+        }
+
+        .about-us-img{
+            grid-column: 4 / span 2;
+            grid-row: 4;
+            padding-top: 25px;
+        }
+
+        .about-us-img img {
+            width:100%;
+            height:93%;
+            object-fit: cover;
+            object-position: 57.5% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+
+        /*ACTIONS*/
+        .action1, .action2, .action3, .action4{
+            margin: 8px;
+            background-color: #243C5C;
+            padding:0px;
+            color: #FFFBF6;
+        }
+        
+        .action1 p, .action2 p, .action3 p, .action4 p{
+            padding: 0px 20px 6px 20px;
+        }
+
+        .action1 img, .action2 img, .action3 img, .action4 img{
+            height:450px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .action1{
+            grid-column: 2 / span 1;
+            grid-row: 5;
+        }
+        .action1 img{
+            object-position: 0px 50%;
+        }
+
+        .action2{
+            grid-column: 3 / span 1;
+            grid-row: 5;
+        }
+        .action2 img{
+            object-position: -180px 50%;
+        }
+
+        .action3{
+            grid-column: 4 / span 1;
+            grid-row: 5;
+        }
+        .action3 img{
+            object-position: 0px 50%;
+        }
+
+        .action4{
+            grid-column: 5 / span 1;
+            grid-row: 5;
+        }
+        .action4 img{
+            object-position: 0px 50%;
+        }
+
+        /*MILESTONES*/
+        .milestones-text{
+            grid-column: 2 / span 2;
+            grid-row: 6;
+            text-align: left;
+        }
+        .milestones-text ul{
+            list-style-type: square;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .milestones-text ul li{
+            padding: 2px;
+        }
+        .milestones-img{
+            grid-column: 4 / span 2;
+            grid-row: 6;
+            padding-top: 30px;
+        }
+        .milestones-img img {
+            width:100%;
+            height:93%;
+            object-fit: cover;
+            object-position: 57.5% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+        
+        /*DIRECTORS*/
+        .directors-text{
+            grid-column: 4 / span 2;
+            grid-row: 7;
+            text-align: left;
+            margin-top: -20px;
+        }
+
+        .directors-text ul{
+            list-style-type: square;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .directors-text ul li{
+            padding: 2px;
+        }
+        .directors-img{
+            grid-column: 2 / span 2;
+            grid-row: 7;
+            padding-top: 35px;
+        }
+        .directors-img img {
+            width:90%;
+            height:90%;
+            object-fit: cover;
+            object-position: 57.5% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+        <!--Navbar-->
+
+        <div class="grid-item headertext">
+            <h1>Duvall Historical Society</h1>
+        </div>
+
+        <div class="grid-item headerimage">
+            <img class="imagemain" src="images/duvallsignextend2.png" alt="Welcome to Duvall sign on a pretty sunset">
+        </div>
+
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="visit.html">Visit</a></li>
+                <li><a href="involved.html">Get Involved</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item bgcolor-standard"></div>
+
+        <div class="grid-item about-us-text">
+            <h2>About Us</h2>
+            <p>Our Mission Statement: Preserve, record, publish, and promote appreciation of the history of Duvall, and the lower Snoqualmie Valley through making history and accessible and engaging lifelong experience for people of all ages.<br><br>Founded in 1976, the Duvall Historical Society works to preserve the heritage of Duvall and the surrounding region. We publish books on this subject and sponsor regular programs open to the general public.<br><br>The Historical Society also opens the Dougherty House for public viewing (pictured right), now listed on the National Register of Historic Places, each Sunday, May through September from 1:00 p.m. - 4:00 p.m<br><br>We believe in the power of history and the preservation of our culture.</p>
+        </div>
+
+        <div class="grid-item about-us-img">
+            <img src="/images/DoughertyHouse@2x.png" alt="Archival image of the Dougherty house">
+        </div>
+
+        <div class="grid-item action1">
+            <h2>Visit Us</h2>
+            <img src="/images/DoughertyHouseVertical.png" alt="Present day image of the Dougherty house">
+            <p>Duvall is a fun place to explore! Stop by and experience one of our events.</p>
+            <a href="visit.html">
+                <button>Learn More</button>
+            </a>    
+        </div>
+
+        <div class="grid-item action2">
+            <h2>Get Involved</h2>
+            <img src="/images/duvalldays.jpg" alt="Aerial image of Duvall days">
+            <p>Help preserve our heritage - lots of fun ways you can make a difference!</p>
+            <a href="involved.html">
+                <button>Learn More</button>
+            </a>
+        </div>
+
+        <div class="grid-item action3">
+            <h2>Publications</h2>
+            <img src="/images/bridge.jpg" alt="Archival image of Duvall bridge">
+            <p>Access hundreds of digitized photos and archive entries on our online collection.</p>
+            <a href="publications.html">
+                <button>Learn More</button>
+            </a>
+        </div>
+
+        <div class="grid-item action4">
+            <h2>FAQ</h2>
+            <img src="/images/dennyredman.jpg" alt="Local musician on steps of the Dougherty house">
+            <p>Explore answers to FAQs and even ask your own questions!</p>
+            <a href="faq.html">
+                <button>Learn More</button>
+            </a>
+        </div>
+
+        <div class="grid-item milestones-text">
+            <h2>Major Milestones</h2>
+            <ul>
+                <li>1983: City acquires 26 acre Dougherty Farmstead site</li>
+                <li>1985: Historical Society and City’s first grant for renovation</li>
+                <li>2004: Dougherty Farmstead granted National Landmark status</li>
+                <li>2008: Duvall Historical Society website goes live</li>
+                <li>2009: 4 Culture Archive/Scanning Project Grant</li>
+                <li>2011: DHS Grant from 4 Culture for Heritage Collections Care</li>
+                <li>2013: Supported and participated in Duvall's Centennial Year Celebrations</li>
+                <li>2014: Created several historical displays at the Duvall Visitor Center (currently featuring early Duvall business artifacts and a wall display of their locations on Main Street)</li>
+                <li>2014: Maintained and enhanced the Dougherty House displays, bunkhouse, tool shed, and heritage gardens</li>
+                <li>2019: Newspaper digitation</li>
+                <li>2020: Created multiple videos of Duvall's history and the Dougherty House to reach the community and provide public benefit virtually</li>
+            </ul>
+        </div>
+        <div class="grid-item milestones-img">
+            <img src="/images/duvallhouses.jpeg" alt="Archival image of Duvall houses">
+        </div>
+
+        
+        <div class="grid-item directors-img">
+            <img src="/images/board.jpg" alt="Board of directors picnic 2008">
+        </div>
+        <div class="grid-item directors-text">
+            <h2>Board of Directors</h2>
+            <h3>Current Officers and Board Members</h3>
+            <ul>
+                <li>President: Marilyn “Country” Roney</li>
+                <li>Vice President: Lance “Fiver” Pilon</li>
+                <li>Secretary: OPEN</li>
+                <li>Treasurer: Connie Zimmerman</li>
+                <li>Other Board Members: Kimberly Engelkes, Greg Giuliani, Lynette Ziuchkovski Archivist, Denny Redman</li>
+            </ul>
+            <h3>Election of Officers and Board Members</h3>
+            <p>The slate of officers and board members nominated for election will be made available annually in January. Election for these candidates will be held at the January General Membership meeting.</p>
+        </div>
+
+        <div class="grid-item footer-bg">
+        </div>
+        <div class="grid-item footer-text">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Physical Address: 26526 NE Cherry Valley Road, Duvall, WA</li>
+                <li>Mailing Address: DHS, PO Box 385, Duvall, WA 98019</li>
+                <li>Email: duvallhistoricalsociety@gmail.com</li>
+            </ul>
+            <h2>Receive our Newsletter</h2>
+            <form action="/action_page.php">
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Your email address..."><br><br>
+                <input input type="button" value="SUBMIT" onclick="showFloatingBanner()">
+            </form>
+        </div>
+        <div class="grid-item footer-map">
+            <h2>Visit Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.7354912862147!2d-121.98650042353563!3d47.7477866712032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900b3e453dae0f%3A0x4f22cc0b67f29b3b!2sDougherty%20Farmstead!5e0!3m2!1sen!2sus!4v1685327941102!5m2!1sen!2sus" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+
+    <div id="floating-banner">
+        Thank you! Your response has been received!
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

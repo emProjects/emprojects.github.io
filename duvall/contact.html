@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/naf0jkv.css">
+
+    <style>
+
+        /*GENERAL*/
+
+        .bgcolor-standard{
+            background-color: #F5E9D9;
+            grid-column: 1 / span 6;
+            grid-row: 4 / span 4;
+            margin: -3px -8px;
+            padding: 0;
+        }
+        
+        /*HEADER*/
+
+        .headertext{
+        grid-column: 1 / span 6;
+        grid-row: 1;
+        margin: -8px;
+        padding: 0;
+        background-color: #243C5C;
+        color: #FFFBF6;
+        }
+
+        .headerimage{
+        grid-column: 1 / span 6;
+        grid-row: 2;
+        margin-right: 50px;
+        height: 275px;
+        display: flex;
+        padding: 0px;
+        margin: -8px;
+        }
+
+        .imagemain{
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 53%;
+        }
+
+        /*BUTTONS*/
+        .about-us-img{
+            grid-column: 2 / span 2;
+            grid-row: 4 / span 2;
+            padding-top: 25px;
+            padding-right: 25px;
+        }
+
+        .about-us-img img {
+            width:90%;
+            height:100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+
+        .buttons{
+            grid-column: 4 / span 2;
+            grid-row: 4;
+            text-align: left;
+        }
+
+        button{
+            width: 21%;
+            background-color: #005A84;
+            color:#FFFBF6;
+            padding: 10px 20px;
+            margin: 8px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            transition-duration: 0.5s;
+        }
+        
+        .formadapt{
+            grid-column: 4 / span 2;
+            grid-row: 5;
+            text-align: left;
+        }
+
+        .formadapt input[type=button] {
+            width: 30%;
+            background-color: #005A84;
+            color:#FFFBF6;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            transition-duration: 0.5s;
+        }
+        .formadapt input[type=button]:hover {
+            transition-duration: 0.5s;
+            background-color: #0C1B2F;
+        }
+
+        .checkbox-container {
+            display:flex;
+        }
+
+        .checkbox-container label {
+            margin-left: 20px;
+            padding: 10px 15px;
+            background-color: #E9CEAD;
+            border-radius: 4px;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+        <!--Navbar-->
+
+        <div class="grid-item headertext">
+            <h1>Duvall Historical Society</h1>
+        </div>
+
+        <div class="grid-item headerimage">
+            <img class="imagemain" src="images/noveltybridge2.png" alt="historical parade">
+        </div>
+
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visit.html">Visit</a></li>
+                <li><a href="involved.html">Get Involved</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item bgcolor-standard"></div>
+
+        <div class="grid-item about-us-img">
+            <img src="/images/DoughertyHouseVertical.png" alt="The Dougherty house on a sunny day">
+        </div>
+
+        <div class="buttons">
+            <h2>Contact Us!</h2>
+            <button id="button1" class="toggle-button" onclick="showForm('form1', 'button1')">Sign up to Volunteer</button>
+            <button id="button2" class="toggle-button" onclick="showForm('form2', 'button2')">Purchase a Publication</button>
+            <button id="button3" class="toggle-button" onclick="showForm('form3', 'button3')">Ask a Question</button>
+        </div>
+
+        <div class="formadapt">
+            <h3 id="placeholder">A form will appear here once you've made your selection.</h3>
+            <form id="form1" class="form">
+            <h3>Sign up to Volunteer</h3>
+                <label for="fullname">Full Name</label><br><br>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe..."><br><br>
+                <label for="email">Email Address</label><br><br>
+                <input type="text" id="email" name="email" placeholder="johndoe@gmail.com..."><br><br>
+                <label for="checkbox">I am interested in the following opportunities...</label><br><br>
+                <div class="checkbox-container">
+                    <label>
+                      <input type="checkbox" id="checkbox1">
+                      Docent
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox2">
+                      Photographer
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox3">
+                      Gardener
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox4">
+                      Curator
+                    </label>
+                </div>
+                <br>
+                <div class="checkbox-container">
+                    <label>
+                      <input type="checkbox" id="checkbox5">
+                      Promotion
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox6">
+                      Event Organizer
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox7">
+                      Educator
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox8">
+                      Other
+                    </label>
+                  </div>
+                  <br>
+                <label for="textbox">Message</label><br><br>
+                <textarea class="textbox" name="userInput" placeholder="I would love to volunteer..."></textarea><br><br>
+                <input type="button" value="Submit" onclick="showFloatingBanner()">
+            </form>
+        
+            <form id="form2" class="form">
+                <h3>Purchase a Publication</h3>
+                <label for="fullname">Full Name</label><br><br>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe..."><br><br>
+                <label for="email">Email Address</label><br><br>
+                <input type="text" id="email" name="email" placeholder="johndoe@gmail.com..."><br><br>
+                <label for="checkbox">I would like to purchase the following...</label><br><br>
+                <div class="checkbox-container">
+                    <label>
+                      <input type="checkbox" id="checkbox1">
+                      Hi Times
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox2">
+                      Wagon Wheel 1
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox3">
+                      Wagon Wheel 2
+                    </label>
+                </div>
+                <br>
+                <div class="checkbox-container">
+                    <label>
+                      <input type="checkbox" id="checkbox4">
+                      Wagon Wheel 3
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox5">
+                      Just Cogatatin'
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox6">
+                      Story of Duvall
+                    </label>
+                </div>
+                <br>
+                <div class="checkbox-container">
+                    <label>
+                      <input type="checkbox" id="checkbox7">
+                      Digging Duvall
+                    </label>
+                    <label>
+                      <input type="checkbox" id="checkbox8">
+                      Duvall Immigrant
+                    </label>
+                  </div>
+                  <br>
+                <label for="textbox">Message</label><br><br>
+                <textarea class="textbox" name="userInput" placeholder="I would like to purchase..."></textarea><br><br>
+                <input type="button" value="Submit" onclick="showFloatingBanner()">
+            </form>
+        
+            <form id="form3" class="form">
+                <h3>Ask a Question</h3>
+                <label for="fullname">Full Name</label><br><br>
+                <input type="text" id="fullname" name="fullname" placeholder="John Doe..."><br><br>
+                <label for="email">Email Address</label><br><br>
+                <input type="text" id="email" name="email" placeholder="johndoe@gmail.com..."><br><br>
+                <label for="textbox">Question</label><br><br>
+                <textarea class="textbox" name="userInput" placeholder="My question is..."></textarea><br><br>
+                <input type="button" value="Submit" onclick="showFloatingBanner()">
+            <!-- Add your form fields here -->
+            </form>
+        </div>
+
+        <div class="grid-item footer-bg">
+        </div>
+        <div class="grid-item footer-text">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Physical Address: 26526 NE Cherry Valley Road, Duvall, WA</li>
+                <li>Mailing Address: DHS, PO Box 385, Duvall, WA 98019</li>
+                <li>Email: duvallhistoricalsociety@gmail.com</li>
+            </ul>
+            <h2>Receive our Newsletter</h2>
+            <form action="/action_page.php">
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Your email address..."><br><br>
+                <input input type="button" value="SUBMIT" onclick="showFloatingBanner()">
+            </form>
+        </div>
+        <div class="grid-item footer-map">
+            <h2>Visit Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.7354912862147!2d-121.98650042353563!3d47.7477866712032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900b3e453dae0f%3A0x4f22cc0b67f29b3b!2sDougherty%20Farmstead!5e0!3m2!1sen!2sus!4v1685327941102!5m2!1sen!2sus" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+
+    <script>
+        document.getElementById('form1').style.display = 'none';
+        document.getElementById('form2').style.display = 'none';
+        document.getElementById('form3').style.display = 'none';
+
+        function showForm(formId, buttonId) {
+            // Hide all forms
+            document.getElementById('placeholder').style.display = 'none';
+            document.getElementById('form1').style.display = 'none';
+            document.getElementById('form2').style.display = 'none';
+            document.getElementById('form3').style.display = 'none';
+            document.getElementById('button1').style.backgroundColor = '#005A84';
+            document.getElementById('button2').style.backgroundColor = '#005A84';
+            document.getElementById('button3').style.backgroundColor = '#005A84';
+            
+
+            // Show the selected form
+            document.getElementById(formId).style.display = 'block';
+            document.getElementById(buttonId).style.backgroundColor = '#0C1B2F';
+
+            // Remove 'selected' class from all buttons
+            document.getElementById('button1').classList.remove('selected');
+            document.getElementById('button2').classList.remove('selected');
+            document.getElementById('button3').classList.remove('selected');
+
+            // Add 'selected' class to the clicked button
+            document.getElementById(buttonId).classList.add('selected');
+        }
+    </script>
+
+    <div id="floating-banner">
+        Thank you! Your response has been received!
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

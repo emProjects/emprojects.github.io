@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/naf0jkv.css">
+
+    <style>
+
+        /*GENERAL*/
+
+        .bgcolor-standard{
+            background-color: #F5E9D9;
+            grid-column: 1 / span 6;
+            grid-row: 4 / span 4;
+            margin: -3px -8px;
+            padding: 0;
+        }
+
+        /*HEADER*/
+
+        .headertext{
+        grid-column: 1 / span 6;
+        grid-row: 1;
+        margin: -8px;
+        padding: 0;
+        background-color: #243C5C;
+        color: #FFFBF6;
+        }
+
+        .headerimage{
+        grid-column: 1 / span 6;
+        grid-row: 2;
+        margin-right: 50px;
+        height: 275px;
+        display: flex;
+        padding: 0px;
+        margin: -8px;
+        }
+
+        .imagemain{
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 55%;
+        }
+        
+        /*DOUGHERTY FARMSTEAD*/
+        .dougherty-text{
+            grid-column: 2 / span 2;
+            grid-row: 4 / span 2;
+            text-align: left;
+        }
+
+        .dougherty h2{
+            text-align: center;
+        }
+
+        .dougherty p{
+            text-align: left;
+        }
+
+        .dougherty-img{
+            grid-column: 4 / span 2;
+            grid-row: 4;
+            padding-top: 25px;
+            margin-bottom: -220px;
+        }
+
+        .dougherty-img img{
+            width:650px;
+            height:420px;
+            object-fit: cover;
+            object-position: 30% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+
+        .dougherty-vid{
+            margin-top: 200px;
+            grid-column: 4 / span 2;
+            grid-row: 5;
+        }
+
+        .dougherty-vid iframe{
+            width: 650px;
+            height: 365px;
+            box-shadow: 10px 10px #243C5C;
+        }
+        
+        /*CEMETERY*/
+        .cemetery-text{
+            grid-column: 4 / span 2;
+            grid-row: 6;
+            text-align: left;
+            margin-top: -20px;
+        }
+
+        .cemetery-img{
+            grid-column: 2 / span 2;
+            grid-row: 6;
+            padding-top: 35px;
+        }
+        .cemetery-img img {
+            width:95%;
+            height:375px;
+            object-fit: cover;
+            object-position: 70% 30%;
+            box-shadow: 10px 10px #243C5C;
+            margin-bottom: 25px;
+            margin-right: 30px;
+        }
+
+        /*TOUR*/
+        .tour-text{
+            grid-column: 2 / span 2;
+            grid-row: 7;
+            text-align: left;
+        }
+        .tour-img{
+            grid-column: 4 / span 2;
+            grid-row: 7;
+            padding-top: 30px;
+        }
+        .tour-img img {
+            width:100%;
+            height:93%;
+            object-fit: cover;
+            object-position: 57.5% 50%;
+            box-shadow: 10px 10px #243C5C;
+        }
+
+        button{
+            width: 95%;
+            background-color: #005A84;
+            color:#FFFBF6;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: "proxima-nova", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 16px;
+            transition-duration: 0.5s;
+        }
+
+        button:hover{
+            transition-duration: 0.5s;
+            background-color: #0C1B2F
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+        <!--Navbar-->
+
+        <div class="grid-item headertext">
+            <h1>Duvall Historical Society</h1>
+        </div>
+
+        <div class="grid-item headerimage">
+            <img class="imagemain" src="images/duvallwalkextend.png" alt="historical parade">
+        </div>
+
+        <div class="grid-item navmenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="visit.html">Visit</a></li>
+                <li><a href="involved.html">Get Involved</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="grid-item bgcolor-standard"></div>
+
+        <div class="grid-item dougherty-text">
+            <h2>Dougherty Farmstead</h2>
+            <h3>Visit our Open House</h3>
+            <p>Stop by from 1pm to 4pm every Sunday, May through September 30th for a tour of the Dougherty Farmstead. Walk through the Dougherty House (built over 100 years ago!) and visit the bunkhouse, milk barn, and pioneer cemetery nearby.<br><br>The Dougherty House is located at 26526 NE Cherry Valley Road in Duvall.</p>
+            <h3>Historical Significance</h3>
+            <p>In 1886 James O'Leary bought 162 acres from homesteader William Long. In 1888, when Washington was still a territory, O'Leary built the house but didn't live in it. After other owners, then John and Kate Dougherty bought the house in 1898 and the family lived in the house until Leo Dougherty died in 1983.<br><br>The house was built near the Snoqualmie River in a little village called Cherry Valley. In 1910, railroads wanted the flat land where the village was located so the railroads moved the buildings, some to what became Duvall. The Dougherty House was moved up the hill to it's present site, pulled by horses. With a grant from King County, the Duvall Historical Society started working on preserving the house in 1985 with a lease from the Catholic Archdiocese who owned the house upon Leo Dougherty's death. The house has a special integrity as a 19th century farmhouse since it wasn't altered in the previous 100 years. No walls, doors or windows were changed. The original woodwork and staircase remain as well as the exterior siding. One acre of the Dougherty farmstead including the house was named a king county landmark, and now is listed as a National Landmark.<br><br>In 1997, King County purchased the 26 remaining acres with Open Space Funds and gave it to the City of Duvall. The Duvall Historical Society has a contract with the City to maintain the interior and keep it open to the public. The Historical Society has cared for the yard plantings and refurbished the interior, fitting it with furniture and other items to represent the earlier era. Other remaining buildings on the property include the milk house and the bunkhouse where Kate Dougherty, then a widow with eight children, boarded eight loggers.</p>
+        </div>
+
+        <div class="grid-item dougherty-img">
+            <img src="/images/DoughertyHouseColor.jpg" alt="The Dougherty house">
+        </div>
+
+        <div class="grid-item dougherty-vid">
+            <iframe src="https://www.youtube.com/embed/-UFBkosISug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div class="grid-item cemetery-img">
+            <img src="/images/cemetery.jpg" alt="Pioneer cemetery">
+            <img src="/images/cemeteryplaque.jpg" alt="Pioneer cemetery plaque">
+        </div>
+        <div class="grid-item cemetery-text">
+            <h2>Pioneer Cemetery</h2>
+            <h3>Visit the Cemetery</h3>
+            <p>The Pioneer Cemetery is located adjacent to the Dougherty Farmstead at 26526 NE Cherry Valley Road, Duvall.</p>
+            <h3>Historical Significance</h3>
+            <p>In 1886, an early Pioneer and saloon keeper, named James O’Leary, deeded on acre of land to the Squak Methodist Mission for the building of a church and cemetery. The half acre cemetery behind the church was used by Duvall’s early pioneers, but only for a few short years because seepage from the upper slopes kept the ground constantly wet and soggy. It was disconcerting for mourners to see gravediggers furiously bailing several inches of water before lowering the casket so the site was abandoned as a burial place ground sometime between 1902 and 1905. In 1909 and 1910 when a portion of the hillside had to be excavated for the Great Northern Railroad right-of-way, about 20 bodies were moved, some to the new Novelty cemetery south of Duvall.<br><br>The first person buried was a man from Tolt (now Carnation) who name has been lost. The second is believed to have been Mrs. James (Annie) Duvall, second wife of the town’s namesake. Among the graves remaining here are those of Stephanie Dyer Duvall, Ardle Pinkerton, Corinda Woodberry Pinkerton, Mr. Leyde, Mrs. Peterson, Mrs. Pingay, two Ruddy children, Florence Hible, and two Allen children. We also now believe that at least 44 people remain buried in the Pioneer cemetery. In 2009, the Rotary Club of Duvall commissioned a ground imaging project which yielded about 44 locations of “vault-shaped” anomalies a few feet below the surface of the ground. For years, people believed most of the bodies had been moved to the Novelty Cemetery and this puts that story into question.<br><br>Time passed and the cemetery was nearly forgotten, becoming covered with undergrowth. In 1994, Ken Best, an Eagle Scout with American Legion sponsored Troop #411, led a massive cleanup project in the cemetery. He was assisted by scoutmaster, Mark Beier, his troop parents and some cub scouts. Their work has enhanced the dignity of the resting place of some of Duvall’s earliest pioneers.</p>
+        </div>
+
+        <div class="grid-item tour-text">
+            <h2>Walking Tour</h2>
+            <p>The historic town of Duvall is full of interesting stories. Moving the town, to bailing out graves. Our self-guided tour of downtown Duvall is a fun way to learn about historic buildings and the stories they have to share.</p>
+            <a href="https://mtsgreenway.org/explore/snoqualmie-river-valley/" target="blank">
+                <button>Click here for the tour</button>
+            </a>
+        </div>
+        <div class="grid-item tour-img">
+            <img src="/images/duvallwalk.jpg" alt="Downtown Duvall">
+        </div>
+
+        <div class="grid-item footer-bg">
+        </div>
+        <div class="grid-item footer-text">
+            <h2>Contact Us</h2>
+            <ul>
+                <li>Physical Address: 26526 NE Cherry Valley Road, Duvall, WA</li>
+                <li>Mailing Address: DHS, PO Box 385, Duvall, WA 98019</li>
+                <li>Email: duvallhistoricalsociety@gmail.com</li>
+            </ul>
+            <h2>Receive our Newsletter</h2>
+            <form action="/action_page.php">
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="Your email address..."><br><br>
+                <input input type="button" value="SUBMIT" onclick="showFloatingBanner()">
+            </form>
+        </div>
+        <div class="grid-item footer-map">
+            <h2>Visit Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2682.7354912862147!2d-121.98650042353563!3d47.7477866712032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900b3e453dae0f%3A0x4f22cc0b67f29b3b!2sDougherty%20Farmstead!5e0!3m2!1sen!2sus!4v1685327941102!5m2!1sen!2sus" width="550" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+
+    <div id="floating-banner">
+        Thank you! Your response has been received!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
